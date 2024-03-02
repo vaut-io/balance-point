@@ -1,0 +1,151 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Box from '@/components/Box.astro';
+import Gutter from '@/components/Gutter.astro';
+---
+
+<BaseLayout>
+	<Gutter>
+		<header>
+			<nav>
+				<p>Balance Point</p>
+				<ul>
+					<li><a href="#servicios">Servicios</a></li>
+					<li><a href="#filosofia">Filosofia</a></li>
+					<li><a href="#reseñas">Reseñas</a></li>
+					<li><a href="#precios">Precios</a></li>
+					<li><a href="#reserva-cita"><strong>Reserva tu cita</strong></a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section aria-label="balance point">
+				<hgroup>
+					<h1>Balance Point</h1>
+					<p>Donde la salud encuentra su punto de Equilibrio</p>
+				</hgroup>
+			</section>
+
+			<section aria-label="servicios" id="servicios">
+				<hgroup>
+					<h2>Nuestros Servicios</h2>
+					<p>
+						Nuestro enfoque holístico y personalizado está diseñado para ayudarte a encontrar tu
+						equilibrio interior y mejorar tu calidad de vida de manera integral..
+					</p>
+					<p>
+						Ofrecemos una amplia gama de tratamientos naturales para abordar una variedad de
+						necesidades de salud y bienestar:
+					</p>
+				</hgroup>
+
+				<ul>
+					<li>
+						<h3>Acupunctura</h3>
+						<p>
+							Una antigua práctica medicinal china que utiliza agujas delgadas para estimular puntos
+							específicos en el cuerpo, promoviendo el flujo de energía y aliviando una variedad de
+							dolencias físicas y emocionales.
+						</p>
+					</li>
+					<li>
+						<h3>Flores Bach</h3>
+						<p>
+							utiliza esencias florales para ayudar a equilibrar las emociones y promover el
+							bienestar emocional y mental.
+						</p>
+					</li>
+					<li>
+						<h3>Naturopatia</h3>
+						<p>
+							Nuestros naturopatas trabajan con la naturaleza para ayudar a restablecer el
+							equilibrio interno del cuerpo, utilizando una combinación de terapias con, los
+							suplementos herbales, cambios alimenticios.
+						</p>
+					</li>
+					<li>
+						<h3>Reflexología Podal</h3>
+						<p>
+							Esta terapia se basa en la idea de que ciertos puntos en los pies están conectados con
+							diferentes partes del cuerpo. Al estimular estos puntos, la reflexología podal puede
+							ayudar a aliviar el estrés, mejorar la circulación y promover la relajación profunda.
+						</p>
+					</li>
+					<li>
+						<h3></h3>
+						<p></p>
+					</li>
+				</ul>
+			</section>
+			Nuestra Filosofía
+
+			<section aria-label="nuestra filosofia" id="">
+				<p>Compromiso / Conocenos / Mas sobre nosotros</p>
+				<h2 id="filosofia">Nuestra Filosofia</h2>
+
+				<p>
+					En Balance Point, creemos en el poder curativo inherente del cuerpo y en la importancia de
+					abordar la salud de manera integral. Nos esforzamos por proporcionar un ambiente acogedor
+					y de apoyo donde puedas sentirte cómodo y seguro mientras trabajamos juntos para alcanzar
+					tus objetivos de salud y bienestar. Nuestro Compromiso Nos comprometemos a brindarte una
+					atención personalizada y de alta calidad en cada sesión. Nuestro equipo de terapeutas
+					altamente capacitados está aquí para escucharte, proporcionarte orientación experta y
+					ayudarte en tu viaje hacia una vida más equilibrada y saludable.
+				</p>
+			</section>
+
+			<section aria-labelledby="reseñas">
+				<h2 id="reseñas">Reseñas</h2>
+				<article>
+					<h3>Reseña 1</h3>
+					<p>
+						Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
+						consectetur cupidatat.
+					</p>
+				</article>
+			</section>
+
+			<section aria-labelledby="precios">
+				<h2 id="precios">Lista Precios</h2>
+			</section>
+
+			<section aria-labelledby="reserva-cita">
+				<h2 id="reserva-cita">Reserva tu cita</h2>
+				<p>Contáctanos</p>
+				<p>
+					¡Da el primer paso hacia una mejor salud y bienestar hoy mismo! Contáctanos para aclarar
+					tus dudas.
+				</p>
+				<form action="">
+					<label for="nombre"></label>
+					<input id="nombre" type="text" placeholder="Nombre" />
+					<label for="telefono"></label>
+					<input id="telefono" type="text" placeholder="Telefono" />
+					<label for="asunto"></label>
+					<input id="asunto" type="text" placeholder="Asunto" />
+					<label for="mensaje"></label>
+					<textarea id="mensaje" placeholder="Mensaje"></textarea>
+					<button type="submit">¡Reserva tu cita!</button>
+				</form>
+			</section>
+		</main>
+		<footer>
+			<p>
+				(Este espacio no está diseñado para reservar cita ni para dar tramiento solo para resolver
+				dudas)
+			</p>
+			<h3>Condiciones</h3>
+			<p>
+				Las cancelaciones hay que hacerlas con una anterlación de 24h, avisando la la antelación
+				debida no se duvuelve el dinero, sino que se cambia cita para oto dia. Se pueden hacer bonos
+				de acupuntura de 5 y 10 sesiones los bonos pueden se pueden utilizar varias personas.
+			</p>
+		</footer>
+	</Gutter>
+</BaseLayout>
+
+<style>
+	section {
+		padding-block: var(--space-xl-2xl);
+	}
+</style>
