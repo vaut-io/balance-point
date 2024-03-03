@@ -1,0 +1,39 @@
+---
+import Gutter from '@/components/Gutter.astro';
+---
+
+<header>
+	<Gutter>
+		<nav>
+			<p>Logo</p>
+			<ul role="list">
+				<li><a href="#servicios">Servicios</a></li>
+				<li><a href="#filosofia">Filosofia</a></li>
+				<li><a href="#resenas">Reseñas</a></li>
+				<li><a href="#precios">Precios</a></li>
+				<li><a href="#reserva-cita"><strong>Reserva tu cita</strong></a></li>
+			</ul>
+		</nav>
+	</Gutter>
+</header>
+
+<style>
+	header {
+		padding-block: var(--space-2xs-xs);
+	}
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2xs-xs);
+	}
+
+	li {
+		font-size: var(--step--1);
+	}
+</style>

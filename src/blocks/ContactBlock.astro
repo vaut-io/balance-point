@@ -1,0 +1,31 @@
+---
+import Gutter from '@/components/Gutter.astro';
+---
+
+<section aria-label="reserva cita" id="reserva-cita">
+	<Gutter>
+		<h2>Reserva tu cita</h2>
+		<p>Contáctanos</p>
+		<p>
+			¡Da el primer paso hacia una mejor salud y bienestar hoy mismo! Contáctanos para aclarar tus
+			dudas.
+		</p>
+		<form action="">
+			<label for="nombre"></label>
+			<input id="nombre" type="text" placeholder="Nombre" />
+			<label for="telefono"></label>
+			<input id="telefono" type="text" placeholder="Telefono" />
+			<label for="asunto"></label>
+			<input id="asunto" type="text" placeholder="Asunto" />
+			<label for="mensaje"></label>
+			<textarea id="mensaje" placeholder="Mensaje"></textarea>
+			<button type="submit">¡Reserva tu cita!</button>
+		</form>
+	</Gutter>
+</section>
+
+<style>
+	section {
+		padding-block: calc(var(--block-padding) / 2);
+	}
+</style>

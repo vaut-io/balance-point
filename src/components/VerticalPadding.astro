@@ -1,0 +1,27 @@
+---
+export type VerticalPaddingOptions = 'large' | 'medium' | 'none';
+
+const { start = 'medium', end = 'medium' } = Astro.props;
+---
+
+<div class={`start-${start} end-${end}`}>
+	<slot />
+</div>
+
+<style>
+	div {
+		--block-padding: var(--space-2xl-3xl);
+	}
+	.start-large {
+		padding-block-start: var(--block-padding);
+	}
+	.start-medium {
+		padding-block-start: calc(var(--block-padding) / 2);
+	}
+	.start-large {
+		padding-block-end: var(--block-padding);
+	}
+	.start-medium {
+		padding-block-end: calc(var(--block-padding) / 2);
+	}
+</style>
