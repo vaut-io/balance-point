@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Stack } from '$lib/components/primitives'
+    import { Stack } from './primitives'
 </script>
 <form action="" class="flow" >
     <Stack space="3xs-2xs">

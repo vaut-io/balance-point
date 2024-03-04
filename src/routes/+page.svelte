@@ -1,6 +1,6 @@
 <script lang="ts">
 import '../app.css';
-import { ContactForm } from '$lib/components'
+import { ContactForm, Footer, Header, Hero } from '$lib/components'
 import { Frame, Gutter, Sidebar } from '$lib/components/primitives'
 import { services } from '$lib/data'
 </script>
@@ -9,36 +9,9 @@ import { services } from '$lib/data'
     <title>Balance Point</title>
 </svelte:head>
 
-<header id="header">
-    <Gutter>
-        <nav>
-            <p>Logo</p>
-            <ul role="list">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#filosofia">Filosofia</a></li>
-                <li><a href="#resenas">Reseñas</a></li>
-                <li><a href="#precios">Precios</a></li>
-                <li><a href="#reserva-cita"><strong>Reserva cita</strong></a></li>
-            </ul>
-        </nav>
-    </Gutter>
-</header>
-
+<Header />
 <main>
-    <section aria-label="balance point" id="hero">
-        <Gutter>
-            <div class="flow">
-                <hgroup>
-                    <h1>Donde la salud encuentra su punto de <span class="underline">equilibrio</span></h1>
-                    <p>
-                        Nuestro enfoque holístico y personalizado está diseñado para ayudarte a encontrar tu
-                        equilibrio interior y mejorar tu calidad de vida de manera integral.
-                    </p>
-                </hgroup>
-            </div>
-        </Gutter>
-    </section>
-
+    <Hero />
     <section aria-label="servicios" id="servicios">
         <Gutter>
             <div class="flow">
@@ -124,70 +97,9 @@ import { services } from '$lib/data'
         </Gutter>
     </section>
 </main>
-
-<footer id="footer">
-    <Gutter>
-        <div class="flow">
-            <h3>Condiciones</h3>
-            <p>
-                (Este espacio no está diseñado para reservar cita ni para dar tramiento solo para resolver
-                dudas)
-            </p>
-            <p>
-                Las cancelaciones hay que hacerlas con una anterlación de 24h, avisando la la antelación
-                debida no se duvuelve el dinero, sino que se cambia cita para oto dia. Se pueden hacer bonos
-                de acupuntura de 5 y 10 sesiones los bonos pueden se pueden utilizar varias personas.
-            </p>
-            <h1>h1</h1>
-            <h2>h2</h2>
-            <h3>h3</h3>
-            <h4>h4</h4>
-            <p>p</p>
-            <div style="padding: 1rem; background-color: var(--color-mid);"></div>
-            <div style="padding: 1rem; background-color: var(--color-dark);"></div>
-            <div style="padding: 1rem; background-color: var(--color-light)"></div>
-            <div style="padding: 1rem; background-color: var(--color-primary)"></div>
-            <div style="padding: 1rem; background-color: var(--color-primary-shade)"></div>
-            <div style="padding: 1rem; background-color: var(--color-secondary)"></div>
-        </div>
-    </Gutter>
-</footer>
-
+<Footer />
 
 <style>
-    #header {
-        padding-block: var(--space-2xs-xs);
-        position: absolute;
-        inline-size: 100%;
-    }
-    #header nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    #header ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--space-2xs-xs);
-    }
-    #header li {
-        font-size: var(--step--1);
-    }
-    #hero {
-        padding-block-start: calc(var(--block-padding) * 2);
-        padding-block-end: var(--block-padding);
-        background-color: var(--color-primary);
-        background-image: url('/equilibrio.jpg');
-        background-position: center;
-        background-attachment: fixed;
-    }
-    #hero h1 {
-        max-inline-size: 25ch;
-    }
-    #hero p {
-        max-inline-size: 50ch;
-    }
     #servicios {
         padding-block-start: var(--block-padding);
         padding-block-end: calc(var(--block-padding) / 2);
@@ -203,14 +115,5 @@ import { services } from '$lib/data'
     }
     #reserva-cita {
         padding-block: calc(var(--block-padding) / 2);
-    }
-    #footer {
-        padding-block-start: var(--block-padding);
-        padding-block-end: calc(var(--block-padding) / 2);
-        background-color: var(--color-mid);
-        color: var(--color-light);
-    }
-    .underline {
-        text-decoration: underline;
     }
 </style>
