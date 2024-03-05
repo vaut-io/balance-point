@@ -15,7 +15,7 @@
 	class="sidebar"
 	class:no-stretch={noStretch}
 	class:is-reversed={reverse}
-	style="--side-width: {sideWidth}; --space: var(--space-{space}); --content-min: {contentMin}%;"
+	style="--side-width: {sideWidth}; --space: var(--{space}); --content-min: {contentMin}%;"
 >
 	<slot />
 </div>

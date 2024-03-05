@@ -1,25 +1,22 @@
-<script lang="ts">
-    import { Gutter } from "./primitives";
-</script>
 <header id="header">
-    <Gutter>
+    <div class="gutter">
         <nav>
             <p>Balance Point</p>
             <ul role="list">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#filosofia">Filosofia</a></li>
-                <li><a href="#resenas">Reseñas</a></li>
-                <li><a href="#precios">Precios</a></li>
+                <li><a class="page-link" href="#servicios">Servicios</a></li>
+                <li><a class="page-link" href="#filosofia">Filosofia</a></li>
+                <li><a class="page-link" href="#resenas">Reseñas</a></li>
+                <li><a class="page-link" href="#precios">Precios</a></li>
                 <li><a href="#reserva-cita" class="button"><strong>Reserva tu cita</strong></a></li>
             </ul>
         </nav>
-    </Gutter>
+    </div>
 </header>
 
 <style>
 header {
-    position: absolute;
-    top: var(--space-3xs-2xs);
+    /* position: absolute; */
+    /* top: var(--3xs-2xs); */
     inline-size: 100%;
 }
 nav {
@@ -27,19 +24,22 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: var(--space-xs-s);
-    padding: var(--space-xs-s);
-    border-radius: var(--space-xs-s);
-    background-color: var(--color-light);
+    gap: var(--xs-s);
+    padding-block: 1rem;
+    /* border-radius: var(--xs-s); */
+    /* background-color: var(--color-light); */
 }
  ul {
     display: flex;
     flex-wrap: wrap;
-    column-gap: var(--space-xs-s);
-    row-gap: var(--space-3xs-2xs);
+    column-gap: 1.5rem;
+    row-gap: 0.75rem;
+    justify-content: center;
+    /* column-gap: var(--xs-s);
+    row-gap: var(--3xs-2xs); */
 }
 li {
-    font-size: var(--step--1);
+    font-size: var(--t-1);
 }
 
 a {
@@ -47,18 +47,20 @@ a {
     color: var(--color-dark);
 
 }
-a:is(:hover, :active) {
-    color: var(--color-secondary);
+.page-link:is(:hover, :active) {
+    /* color: var(--color-secondary); */
+    text-decoration: underline;
 }
 
 .button {
-    padding: var(--space-3xs-2xs);
-    border-radius: var(--space-3xs-2xs);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
     background-color: var(--color-secondary);
     color: var(--color-light);
 }
 
 .button:is(:hover, :active) {
-    background-color: var(--color-dark);
+    background-color: var(--color-mid);
+    color: var(--color-light);
 }
 </style>

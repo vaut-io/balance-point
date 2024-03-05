@@ -1,9 +1,5 @@
-<script lang="ts">
-    import { Gutter } from "./primitives";
-</script>
-
-<footer id="footer">
-    <Gutter>
+<footer id="footer" class="top-padding-large bottom-padding-medium">
+    <div class="gutter">
         <div class="flow">
             <h3>Condiciones</h3>
             <p>
@@ -27,14 +23,12 @@
             <div style="padding: 1rem; background-color: var(--color-primary-shade)"></div>
             <div style="padding: 1rem; background-color: var(--color-secondary)"></div>
         </div>
-    </Gutter>
+    </div>
 </footer>
 
 <style>
-footer {
-    padding-block-start: var(--block-padding);
-    padding-block-end: calc(var(--block-padding) / 2);
-    background-color: var(--color-mid);
-    color: var(--color-light);
-}
+    footer {
+        background-color: var(--color-mid);
+        color: var(--color-light);
+    }
 </style>

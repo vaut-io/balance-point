@@ -12,7 +12,7 @@
 	role={list ? 'list' : undefined}
 	class:shallow={!deep}
 	class:deep
-	style="--space: var(--space-{space});"
+	style="--space: var(--{space});"
 >
 	<slot />
 </svelte:element>
