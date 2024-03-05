@@ -69,12 +69,11 @@
 /* Other custom properties */
 :root {
     --measure: 75ch;
-    --gutter: var(--s-m);
 
     /* Line heights */
     --leading-flat: 1;
     --leading-tight: 1.15;
-    --leading-standard: 1.5;
+    --leading: 1.5;
     --leading-loose: 1.7;
 
     /* Fonts */
@@ -83,6 +82,8 @@
     --font-normal: 400;
     --font-medium: 500;
     --font-bold: 700;
+
+    /* Transitions */
     --transition-base: 250ms ease;
     --transition-movement: 200ms linear;
     --transition-fade: 300ms ease;
@@ -125,9 +126,10 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
     min-height: 100svh;
-    line-height: var(--leading-standard);
+    line-height: var(--leading);
     background-color: var(--color-light);
     color: var(--color-dark);
+    font-size: var(--t0);
     /* overflow-wrap: break-word; */
     /* -webkit-hyphens: auto; */
     /* -moz-hyphens: auto; */
@@ -189,15 +191,14 @@ h1 { font-size: var(--t4); }
 h2 { font-size: var(--t3); }
 h3 { font-size: var(--t2); }
 h4 { font-size: var(--t1); }
-p, li { font-size: var(--t0); }
 p { max-inline-size: var(--measure); text-wrap: pretty; }
-
+a { text-decoration: none; }
 
 /* Utility classes */
 
-.flow > * + * { margin-block-start: var(--xs-s); }
 .flow-tight > * + * { margin-block-start: var(--3xs-2xs); }
-.flow-loose > * + * { margin-block-start: var(--l-xl); }
+.flow > * + * { margin-block-start: var(--xs-s); }
+.flow-loose > * + * { margin-block-start: var(--m-l); }
 
 .top-padding-large { padding-block-start: var(--2xl-3xl); }
 .bottom-padding-large { padding-block-end: var(--2xl-3xl); }
@@ -205,8 +206,37 @@ p { max-inline-size: var(--measure); text-wrap: pretty; }
 .bottom-padding-medium { padding-block-end: var(--l-xl); }
 
 .gutter {
-        margin-inline: auto;
-        inline-size: 100%; /* Needed in order to be a flexbox child */
-        max-inline-size: calc(var(--f-max-width) * 1px);
-        padding-inline: var(--gutter);
+    /* Needed in order to be a flexbox child */
+    /* inline-size: 100%; */
+    margin-inline: auto;
+    max-inline-size: calc(var(--f-max-width) * 1px);
+    padding-inline: var(--s-m);
+}
+
+.button {
+    position: relative;
+    isolation: isolate;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--color-light);
+    background-image: linear-gradient(to bottom right, var(--color-secondary), var(--color-primary));
+}
+.button:is(:hover, :active) {
+    color: var(--color-light);
+}
+.button::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to bottom right, var(--color-mid), var(--color-dark));
+    transition: opacity var(--transition-base);
+    opacity: 0;
+}
+.button:hover::before {
+  opacity: 1;
 }

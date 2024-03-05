@@ -14,19 +14,19 @@ export const reviews: Reviews = [
 	{
 		heading: 'Reseña 4',
 		body: 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'
-	},
+	}
 ];
 
 export const services: Services = [
 	{
 		heading: 'Acupunctura',
 		image: 'acupunctura',
-		body: 'Nuestro enfoque holístico y personalizado está diseñado para ayudarte a encontrar tu equilibrio interior y mejorar tu calidad de vida de manera integral.',
+		body: 'Nuestro enfoque holístico y personalizado está diseñado para ayudarte a encontrar tu equilibrio interior y mejorar tu calidad de vida de manera integral.'
 	},
 	{
 		heading: 'Flores Bach',
 		image: 'flores-bach',
-		body: 'Utiliza esencias florales para ayudar a equilibrar las emociones y promover el bienestar emocional y mental.',
+		body: 'Utiliza esencias florales para ayudar a equilibrar las emociones y promover el bienestar emocional y mental.'
 	},
 	{
 		heading: 'Naturopatia',
@@ -46,13 +46,12 @@ export const services: Services = [
 ];
 
 type Reviews = {
-	heading: string,
-	body: string
-}[]
-
-type Services = {
-	heading: string,
-	image: string,
-	body: string
+	heading: string;
+	body: string;
 }[];
 
+type Services = {
+	heading: string;
+	image: string;
+	body: string;
+}[];

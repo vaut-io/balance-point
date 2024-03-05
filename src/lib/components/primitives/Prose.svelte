@@ -26,4 +26,3 @@
 		font-size: var(--t0);
 	}
 </style>
-

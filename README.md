@@ -1,5 +1,11 @@
 # balance-point
 
+## To-do
+
+- Add sitemap
+- Add enhanced images
+- Add melt ui (?)
+
 ## Requirements
 
 https://coolors.co/fbfcf5-4c4c40-a38833-c0b64a-94a542
