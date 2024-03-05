@@ -23,12 +23,13 @@
 	#hero {
 		position: relative;
 		isolation: isolate;
+		/* margin-block-start: -8rem; */
 		min-block-size: 100vh;
 		min-block-size: 100svh;
 		display: flex;
 		align-items: center;
 		/* block-size: 100%; */
-		padding-block-start: calc(var(--4xl-5xl));
+		padding-block-start: calc(var(--3xl-4xl));
 		padding-block-end: var(--2xl-3xl);
 		/* border-block-end: 0.5rem solid var(--color-tertiary-tint); */
 		background-image: url('img/equilibrio.jpg');
@@ -46,7 +47,10 @@
 		inset: 0;
 		z-index: -1;
 		background-color: hsl(var(--color-tertiary-shade-hsl) / 0.7);
-		backdrop-filter: blur(8px);
+		backdrop-filter: blur(12px);
+	}
+	hgroup {
+		/* max-inline-size: 100ch; */
 	}
 	a:hover {
 		text-decoration: underline;

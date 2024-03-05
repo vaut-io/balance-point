@@ -14,6 +14,7 @@
 
 <style>
 	header {
+		/* height: 0; */
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -30,25 +31,25 @@
 		z-index: 50;
 		color: var(--color-tertiary-tint);
 	}
-	header::before {
+	/* header::before {
 		content: '';
 		display: block;
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background-color: hsl(var(--color-tertiary-shade-hsl) / 0.4);
-		/* border-bottom-left-radius: 1rem; */
+		background-color: hsl(var(--color-tertiary-shade-hsl) / 0);
+		border-bottom-left-radius: 1rem;
 		backdrop-filter: blur(16px);
-	}
+	} */
 	nav {
 		display: flex;
 		flex-wrap: wrap;
 		/* justify-content: space-between; */
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		gap: 0.5rem 8rem;
 		/* block-size: 3rem; */
-		padding-block: 1rem;
+		padding-block-start: 1rem;
 	}
 
 	@media screen and (max-width: 800px) {
