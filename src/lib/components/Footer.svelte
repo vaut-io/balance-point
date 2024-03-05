@@ -16,12 +16,15 @@
 			<h3>h3</h3>
 			<h4>h4</h4>
 			<p>p</p>
+			<div style="padding: 1rem; background-color: var(--color-light)"></div>
 			<div style="padding: 1rem; background-color: var(--color-mid);"></div>
 			<div style="padding: 1rem; background-color: var(--color-dark);"></div>
-			<div style="padding: 1rem; background-color: var(--color-light)"></div>
+			<div style="padding: 1rem; background-color: var(--color-primary-tint)"></div>
 			<div style="padding: 1rem; background-color: var(--color-primary)"></div>
 			<div style="padding: 1rem; background-color: var(--color-primary-shade)"></div>
+			<div style="padding: 1rem; background-color: var(--color-secondary-tint)"></div>
 			<div style="padding: 1rem; background-color: var(--color-secondary)"></div>
+			<div style="padding: 1rem; background-color: var(--color-secondary-shade)"></div>
 		</div>
 	</div>
 </footer>

@@ -2,9 +2,10 @@
 	export let highRes = '';
 	export let lowRes = '';
 	export let alt = '';
+	export let width: number;
+	export let height: number;
+
 	export let aspect = '1:1';
-	export let width = '';
-	export let height = '';
 	const splitRatio = aspect.split(':');
 </script>
 

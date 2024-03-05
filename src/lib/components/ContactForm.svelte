@@ -20,7 +20,7 @@
 
 <style>
 	form {
-		max-inline-size: 50ch;
+		max-inline-size: var(--measure);
 	}
 
 	label {

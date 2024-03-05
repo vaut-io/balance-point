@@ -2,7 +2,11 @@
 
 ## To-do
 
+- Add fonts
+- Add more colors
+- Add favicon
 - Add sitemap
+- Add SEO (meta description, better titles and content related to Meco, Alcalá, Guadalajara)
 - Add enhanced images
 - Add melt ui (?)
 

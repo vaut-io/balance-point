@@ -1,1 +1,1 @@
-export { default as Quotes } from './Quotes.svelte';
+export { default as QuotesIcon } from './QuotesIcon.svelte';

@@ -1,4 +1,4 @@
-export const reviews: Reviews = [
+export const reviews: Review[] = [
 	{
 		heading: 'Reseña 1',
 		body: 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'
@@ -17,7 +17,7 @@ export const reviews: Reviews = [
 	}
 ];
 
-export const services: Services = [
+export const services: Service[] = [
 	{
 		heading: 'Acupunctura',
 		image: 'acupunctura',
@@ -45,13 +45,13 @@ export const services: Services = [
 	}
 ];
 
-type Reviews = {
+export type Review = {
 	heading: string;
 	body: string;
-}[];
+};
 
-type Services = {
+export type Service = {
 	heading: string;
 	image: string;
 	body: string;
-}[];
+};

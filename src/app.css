@@ -4,7 +4,7 @@
     /* Fluid sizes, both for type and space (px) */
     --f-min-size: 16; --f-max-size: 20;
     /* Fluid type multiplier (ratio) */
-    --f-min-ratio: 1.2; --f-max-ratio: 1.25;
+    --f-min-ratio: 1.2; --f-max-ratio: 1.4;
     /* Fluid breakpoint */
     --f-screen: 100vw;
     --f-bp: calc((var(--f-screen) - var(--f-min-width) / 16 * 1rem) / (var(--f-max-width) - var(--f-min-width)));
@@ -54,6 +54,10 @@
     --2xl-max: (var(--f-max-size) * 4);
     --3xl-min: (var(--f-min-size) * 6);
     --3xl-max: (var(--f-max-size) * 6);
+    --4xl-min: (var(--f-min-size) * 8);
+    --4xl-max: (var(--f-max-size) * 8);
+    --5xl-min: (var(--f-min-size) * 12);
+    --5xl-max: (var(--f-max-size) * 12);
 
     /* Computed space values, change the subtraction for different scaling */
     --3xs-2xs: calc(((var(--3xs-min) / 16) * 1rem) + (var(--2xs-max) - var(--3xs-min)) * var(--f-bp));
@@ -64,46 +68,72 @@
     --l-xl: calc(((var(--l-min) / 16) * 1rem) + (var(--xl-max) - var(--l-min)) * var(--f-bp));
     --xl-2xl: calc(((var(--xl-min) / 16) * 1rem) + (var(--2xl-max) - var(--xl-min)) * var(--f-bp));
     --2xl-3xl: calc(((var(--2xl-min) / 16) * 1rem) + (var(--3xl-max) - var(--2xl-min)) * var(--f-bp));
+    --3xl-4xl: calc(((var(--3xl-min) / 16) * 1rem) + (var(--4xl-max) - var(--3xl-min)) * var(--f-bp));
+    --4xl-5xl: calc(((var(--4xl-min) / 16) * 1rem) + (var(--5xl-max) - var(--4xl-min)) * var(--f-bp));
 }
 
-/* Other custom properties */
+/* Colors */
+:root {
+    /* Neutral */
+    --color-dark: hsl(30 5% 9%);
+    --color-dark-hsl: 30 5% 9%;
+    --color-mid: hsl(30 9% 27%);
+    --color-mid-hsl: 30 9% 27%;
+    --color-light: hsl(30 54% 97%);
+    --color-light-hsl: 30 54% 97%;
+    /* Primary */
+    --color-primary-tint: hsl(55 58% 88%);
+    --color-primary-tint-hsl: 55 58% 88%;
+    --color-primary: hsl(55 48% 52%);
+    --color-primary-hsl: 55 48% 52%;
+    --color-primary-shade: hsl(55 82% 10%);
+    --color-primary-shade-hsl: 55 82% 10%;
+    /* Secondary */
+    --color-secondary-tint: hsl(70 63% 90%);
+    --color-secondary-tint-hsl: 70 63% 90%;
+    --color-secondary: hsl(70 43% 45%);
+    --color-secondary-hsl: 70 43% 45%;
+    --color-secondary-shade: hsl(70 23% 15%);
+    --color-secondary-shade-hsl: 70 23% 15%;
+    /* Tertiary */
+    --color-tertiary-tint: hsl(20 90% 80%);
+    --color-tertiary-tint-hsl: 20 90% 80%;
+    --color-tertiary: hsl(20 43% 45%);
+    --color-tertiary-hsl: 20 43% 45%;
+    --color-tertiary-shade: hsl(20 23% 9%);
+    --color-tertiary-shade-hsl: 20 23% 9%;
+    /* Quaternary */
+    /* Quinary */
+}
+
+@media (prefers-color-scheme: dark) {
+
+}
+
+/* Typography */
 :root {
     --measure: 75ch;
 
-    /* Line heights */
+    /* Line height */
     --leading-flat: 1;
-    --leading-tight: 1.15;
-    --leading: 1.5;
-    --leading-loose: 1.7;
-
+    --leading-tight: 1.3;
+    --leading: 1.8;
+    --leading-loose: 2;
+    /* Letter spacing */
+    --tracking-base: +0ch;
+    --tracking-special: +0ch;
     /* Fonts */
-    --font-base: 'Mona Sans', Helvetica, Arial;
-    --font-special: 'iA Writer Quattro', Andale Mono, Courier, Lucida, Monaco, Arial;
-    --font-normal: 400;
-    --font-medium: 500;
-    --font-bold: 700;
-
+    --font-base: 'Source Sans 3', serif;
+    --font-special: 'Playfair Display', serif;
+    /* Font weights */
+    --weight-normal: 400;
+    --weight-bold: 700;
     /* Transitions */
     --transition-base: 250ms ease;
     --transition-movement: 200ms linear;
     --transition-fade: 300ms ease;
     --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
     --transition-bounce-fast: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-
-    /* Colors */
-    --color-dark: #171615;
-    /* --color-dark-glare: #171717; */
-    --color-mid: #4c4c40;
-    /* --color-mid-glare: #ccc; */
-    --color-light: #fbfcf5;
-    /* --color-light-shade: #f7f7f7; */
-    --color-primary: #c0b64a;
-    --color-primary-shade: #a38833;
-    --color-secondary: #94a542;
-    /* --color-tertiary: #350df2; */
-    /* --color-quaternary: #ffd501; */
-    /* --color-quinary: #00d5ff; */
-    /* --color-quinary-shade: #0ac; */
 }
 
 /* Reset styles, inspired by https://piccalil.li/blog/a-more-modern-css-reset/ */
@@ -118,7 +148,7 @@ ul[role='list'], ol[role='list'] { list-style: none; /* padding-inline-start: 0;
 /* Prevent font size inflation on Safari */
 html { -moz-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
 /* Smooth auto-scroll */
-:has(:target) { scroll-behavior: smooth; scroll-padding-top: 3rem; }
+:has(:target) { scroll-behavior: smooth; scroll-padding-top: 0rem; }
 
 /* Set core body defaults */
 body {
@@ -129,6 +159,8 @@ body {
     line-height: var(--leading);
     background-color: var(--color-light);
     color: var(--color-dark);
+    font-family: var(--font-base);
+    letter-spacing: var(--tracking-base);
     font-size: var(--t0);
     /* overflow-wrap: break-word; */
     /* -webkit-hyphens: auto; */
@@ -136,9 +168,6 @@ body {
     /* -ms-hyphens: auto; */
     /* hyphens: auto; */
 }
-
-/* A elements that don't have a class get default styles */
-a:not([class]) { text-decoration-skip-ink: auto; color: currentColor; }
 
 /* Make images easier to work with */
 img, picture {
@@ -186,19 +215,20 @@ button { cursor: pointer; border: none; }
 
 /* Set core text defaults */
 h1, h2, h3, h4, button, input, label { line-height: var(--leading-tight); }
-h1, h2, h3, h4 { text-wrap: balance; }
-h1 { font-size: var(--t4); }
-h2 { font-size: var(--t3); }
-h3 { font-size: var(--t2); }
-h4 { font-size: var(--t1); }
-p { max-inline-size: var(--measure); text-wrap: pretty; }
-a { text-decoration: none; }
+h1, h2, h3, h4 { font-family: var(--font-special); letter-spacing: var(--tracking-special); text-wrap: balance; }
+h1 { font-size: var(--t4); --flow-space: 1em; }
+h2 { font-size: var(--t3); --flow-space: 1em; }
+h3 { font-size: var(--t2); --flow-space: 1em; }
+h4 { font-size: var(--t1); --flow-space: 1em; }
+p { max-inline-size: var(--measure); text-wrap: pretty; --flow-space: 1em; }
+/* <a> elements that don't have a class (:not([class])) get default styles */
+a { text-decoration: none; color: inherit; }
 
 /* Utility classes */
 
-.flow-tight > * + * { margin-block-start: var(--3xs-2xs); }
-.flow > * + * { margin-block-start: var(--xs-s); }
-.flow-loose > * + * { margin-block-start: var(--m-l); }
+.flow-tight > * + * { margin-block-start: var(--2xs-xs); }
+.flow > * + * { margin-block-start: var(--s-m); }
+.flow-loose > * + * { margin-block-start: var(--l-xl); }
 
 .top-padding-large { padding-block-start: var(--2xl-3xl); }
 .bottom-padding-large { padding-block-end: var(--2xl-3xl); }
@@ -219,7 +249,7 @@ a { text-decoration: none; }
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     color: var(--color-light);
-    background-image: linear-gradient(to bottom right, var(--color-secondary), var(--color-primary));
+    background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-tertiary));
 }
 .button:is(:hover, :active) {
     color: var(--color-light);
@@ -227,10 +257,7 @@ a { text-decoration: none; }
 .button::before {
     position: absolute;
     content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     z-index: -1;
     border-radius: 0.5rem;
     background-image: linear-gradient(to bottom right, var(--color-mid), var(--color-dark));
@@ -240,3 +267,4 @@ a { text-decoration: none; }
 .button:hover::before {
   opacity: 1;
 }
+
