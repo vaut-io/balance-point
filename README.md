@@ -9,6 +9,7 @@
 - Add SEO (meta description, better titles and content related to Meco, Alcalá, Guadalajara)
 - Add enhanced images
 - Add melt ui (?)
+- Add scroll bar and text highlight colors
 
 ## Requirements
 

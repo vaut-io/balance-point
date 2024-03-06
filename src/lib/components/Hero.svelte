@@ -32,6 +32,7 @@
 		padding-block-start: calc(var(--3xl-4xl));
 		padding-block-end: var(--2xl-3xl);
 		/* border-block-end: 0.5rem solid var(--color-tertiary-tint); */
+		background-color: var(--color-tertiary-shade);
 		background-image: url('img/equilibrio.jpg');
 		background-position: center;
 		background-repeat: no-repeat;
