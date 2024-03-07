@@ -14,7 +14,7 @@
 				><strong>Reserva tu cita hoy &darr;</strong></a
 			>
 		</p>
-		<p class="with-icon"><iconify-icon icon="mdi:location" width="1.5em" height="1.5em" /> Meco, Madrid</p>
+		<p class="with-icon"><iconify-icon icon="mdi:location" height="1.5em" /> Meco, Madrid</p>
 	</div>
 </section>
 

@@ -1,15 +1,15 @@
 export const reviews: Review[] = [
 	{
 		heading: 'Aurora',
-		body: 'Acudí a Balance Point por problemas de insomnio. Había probado varias cosas sin éxito.Con acupuntura conseguí volver a descansar, llevaba años sin conseguirlo. Desde entonces cuando me vuelve a ocurrir acudo a su consulta y vuelvo a sanar. Yolanda es amable, te escucha, te acompaña y comparte sus conocimientos. Gracias a ella avance espiritualmente, sané heridas pasadas, tiene capacidad para equilibrar tus emociones. Agradezco haberla encontrado. Una gran profesional.'
-	},
-	{
-		heading: 'Alberto',
-		body: 'Yolanda, magnífica profesional, implicada, sincera, muy cuidadora de las personas, si tienes cualquier tipo de dolencia, física, de rehabilitación y las en no pocas ocasiones, las que más quebraderos de cabeza te pueden traer, que son las internas, las que no se ven...!!! Ella, te ayudará a sanar 😉😉😉😉👍 invierte en cuidarte, ganarás salud y calidad de vida!!!'
+		body: 'Yolanda es amable, te escucha, te acompaña y comparte sus conocimientos. Gracias a ella avancé espiritualmente y sané heridas pasadas. ¡Agradezco haberla encontrado, una gran profesional!'
 	},
 	{
 		heading: 'Ángela',
-		body: 'Fui diagnosticada de hipotiroidismo, y me propuse terapias alternativas.....empecé acupuntura con Yoli, y en unos meses equilibre esos valores que tenía alterados..... En alguna ocasión me he contracturado y también me ha sido útil... Un gran descubrimiento....graciasss ☺️'
+		body: 'Empecé acupuntura con Yoli, y en unos meses equilibre los valores de hipotiriodismo que tenía alterados. En alguna ocasión me he contracturado y también me ha sido útil. ¡Un gran descubrimiento, gracias!'
+	},
+	{
+		heading: 'Alberto',
+		body: 'Magnífica profesional - implicada, sincera, muy cuidadora de las personas. Ella te ayudará a sanar. ¡Invierte en cuidarte, ganarás salud y calidad de vida!'
 	},
 
 

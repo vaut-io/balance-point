@@ -1,37 +1,56 @@
 <script lang="ts">
-	import { QuotesIcon } from "$lib/icons";
 	import { type Review } from '$lib/data';
 	export let reviews: Review[];
 </script>
 
-<div class="reviews-grid">
+<div class="reviews-switcher">
 	{#each reviews as review}
 		<div class="review-card">
-			<QuotesIcon />
+			<iconify-icon class="quote" icon="raphael:quote" height="var(--3xl-4xl)" style="color: var(--color-neutral-light)" />
 			<article class="flow">
 				<h3>{review.heading}</h3>
 				<p>{review.body}</p>
+				<div class="flow-2xs-xs" style="color: var(--color-primary-light)">
+					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
+					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
+					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
+					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
+					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
+				</div>
 			</article>
+
 		</div>
 	{/each}
 </div>
 
 
 <style>
-	.reviews-grid {
-		--minimum: 40ch;
-		display: grid;
-		grid-gap: var(--xl-2xl);
-		grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
+	.reviews-switcher {
+		display: flex;
+		flex-wrap: wrap;
+		/* --minimum: 30ch; */
+		/* display: grid; */
+		/* grid-gap: var(--m-l); */
+		/* grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr)); */
+	}
+
+	.reviews-switcher > * {
+		flex-grow: 1;
+		flex-basis: calc((var(--measure) - 100%) * 999);
 	}
 	.review-card {
 		padding: var(--m-l);
-		background-color: var(--color-dark);
-		color: var(--color-light);
+		position: relative;
+		isolation: isolate;
+		font-style: italic;
+		/* background-color: var(--color-neutral-light); */
+		/* color: var(--color-neutral-light); */
 	}
-	.review-card :global(svg) {
-		width: var(--l-xl);
-		height: var(--l-xl);
-		/* color: var(--color-primary); */
+	.quote {
+		position: absolute;
+		top: calc(var(--xs-s) * -1);
+		left: calc(var(--m-l) * -1);
+		z-index: -1;
+		opacity: 0.5;
 	}
 </style>

@@ -97,13 +97,13 @@
 :root {
     /* Neutral */
     --color-neutral-lightest: hsl(30 54% 97%);
-    --color-neutral-light: hsl(30 10% 80%);
+    --color-neutral-light: hsl(30 10% 85%);
     --color-neutral: hsl(30 9% 27%);
     --color-neutral-dark: hsl(30 8% 15%);
     --color-neutral-darkest: hsl(30 5% 9%);
     /* Primary */
     --color-primary-lightest: hsl(55 58% 88%);
-    --color-primary-light: hsl(55 68% 68%);
+    --color-primary-light: hsl(55 68% 75%);
     --color-primary: hsl(55 48% 52%);
     --color-primary-dark: hsl(55 52% 18%);
     --color-primary-darkest: hsl(55 82% 12%);
@@ -121,6 +121,19 @@
     --color-tertiary-darkest: hsl(20 93% 8%);
     /* Quaternary, Quinary */
 }
+
+.theme-neutral { color: var(--color-neutral); }
+.theme-primary { color: var(--color-primary-dark); background-color: var(--color-primary-lightest); }
+.theme-secondary { color: var(--color-secondary-dark); background-color: var(--color-secondary-lightest); }
+
+.theme-neutral h2, .theme-neutral h3 { color: var(--color-neutral-dark); }
+.theme-primary h2, .theme-primary h3 { color: var(--color-primary-darkest); }
+.theme-secondary h2, .theme-secondary h3 { color: var(--color-secondary-dark); }
+
+.theme-neutral hr { color: var(--color-neutral-light); }
+.theme-primary hr { color: var(--color-primary-light); }
+.theme-secondary hr { color: var(--color-secondary-light); }
+
 
 /* Typography */
 :root {
@@ -269,13 +282,3 @@ p, hr {  --flow-space: var(--xs-s); }
 .button:hover::before {
   opacity: 1;
 }
-
-.theme-neutral  { color: var(--color-neutral-dark); }
-.theme-neutral hr { color: var(--color-neutral-light); }
-.theme-neutral p { color: var(--color-neutral); }
-.theme-primary { color: var(--color-primary-darkest); background-color: var(--color-primary-lightest); }
-.theme-primary p { color: var(--color-primary-dark); }
-.theme-primary hr { color: var(--color-primary-light); }
-.theme-secondary { color: var(--color-secondary-dark); background-color: var(--color-secondary-lightest); }
-.theme-secondary p { color: var(--color-secondary-dark); }
-.theme-secondary hr { color: var(--color-secondary-light); }
