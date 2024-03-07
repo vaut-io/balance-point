@@ -70,7 +70,7 @@
 			<div class="flow">
 				<h2>Precios</h2>
 				<hr>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui odio eaque perferendis quis tempore perspiciatis omnis, veniam aperiam nulla voluptas. Ipsum, qui dignissimos autem ipsam ipsa repudiandae eligendi accusantium commodi?</p>
+				<p>...</p>
 			</div>
 		</div>
 	</section>

@@ -45,7 +45,7 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		gap: 0.5rem 8rem;
+		gap: 0.5rem 2rem;
 		padding-block-start: 1rem;
 	}
 

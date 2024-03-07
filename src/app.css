@@ -97,7 +97,7 @@
 :root {
     /* Neutral */
     --color-neutral-lightest: hsl(30 54% 97%);
-    --color-neutral-light: hsl(30 10% 85%);
+    --color-neutral-light: hsl(30 10% 88%);
     --color-neutral: hsl(30 9% 27%);
     --color-neutral-dark: hsl(30 8% 15%);
     --color-neutral-darkest: hsl(30 5% 9%);
@@ -119,6 +119,7 @@
     --color-tertiary: hsl(20 43% 45%);
     --color-tertiary-dark: hsl(20 83% 19%);
     --color-tertiary-darkest: hsl(20 93% 8%);
+    --color-tertiary-darkest-hsl: 20 93% 8%;
     /* Quaternary, Quinary */
 }
 

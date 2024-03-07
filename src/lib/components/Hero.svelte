@@ -32,7 +32,7 @@
 		padding-block-end: var(--2xl-3xl);
 		/* border-block-end: 0.5rem solid var(--color-tertiary-tint); */
 		background-color: var(--color-tertiary-darkest);
-		background-image: url('img/equilibrio.jpg');
+		background-image: url('img/equilibrio-midres.jpg');
 		background-position: center;
 		background-repeat: no-repeat;
 		/* background-attachment: fixed; */
@@ -46,9 +46,9 @@
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background-color: var(--color-tertiary-darkest);
-		opacity: .8;
-		backdrop-filter: blur(12px);
+		background-color: hsl(var(--color-tertiary-darkest-hsl) / 0.7);
+		background-image: radial-gradient(transparent 50%, var(--color-neutral-darkest));
+		backdrop-filter: blur(8px);
 	}
 	a:hover {
 		text-decoration: underline;

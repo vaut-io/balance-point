@@ -28,6 +28,7 @@
 	.reviews-switcher {
 		display: flex;
 		flex-wrap: wrap;
+		gap: var(--m-l);
 		/* --minimum: 30ch; */
 		/* display: grid; */
 		/* grid-gap: var(--m-l); */
@@ -39,7 +40,7 @@
 		flex-basis: calc((var(--measure) - 100%) * 999);
 	}
 	.review-card {
-		padding: var(--m-l);
+		/* padding: var(--m-l); */
 		position: relative;
 		isolation: isolate;
 		font-style: italic;
@@ -48,8 +49,8 @@
 	}
 	.quote {
 		position: absolute;
-		top: calc(var(--xs-s) * -1);
-		left: calc(var(--m-l) * -1);
+		top: calc(var(--m-l) * -1.5);
+		left: calc(var(--m-l) * -1.5);
 		z-index: -1;
 		opacity: 0.5;
 	}
