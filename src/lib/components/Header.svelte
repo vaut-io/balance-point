@@ -28,7 +28,7 @@
 		/* border-top-left-radius: 1rem; */
 		/* top: 0; */
 		z-index: 50;
-		color: var(--color-tertiary-tint);
+		color: var(--color-tertiary-light);
 	}
 	/* header::before {
 		content: '';

@@ -16,8 +16,8 @@
 
 <style>
 	footer {
-		background-color: var(--color-mid);
-		color: var(--color-light);
+		background-color: var(--color-neutral-dark);
+		color: var(--color-neutral-light);
 	}
 	h2 {
 		font-size:var(--t2)

@@ -16,11 +16,9 @@
 	form {
 		max-inline-size: var(--measure);
 	}
-
 	label {
 		display: block;
 	}
-
 	input,
 	textarea {
 		padding: 0.75rem 0.5rem;

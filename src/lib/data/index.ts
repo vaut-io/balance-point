@@ -1,20 +1,18 @@
 export const reviews: Review[] = [
 	{
-		heading: 'Reseña 1',
-		body: 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'
+		heading: 'Aurora',
+		body: 'Acudí a Balance Point por problemas de insomnio. Había probado varias cosas sin éxito.Con acupuntura conseguí volver a descansar, llevaba años sin conseguirlo. Desde entonces cuando me vuelve a ocurrir acudo a su consulta y vuelvo a sanar. Yolanda es amable, te escucha, te acompaña y comparte sus conocimientos. Gracias a ella avance espiritualmente, sané heridas pasadas, tiene capacidad para equilibrar tus emociones. Agradezco haberla encontrado. Una gran profesional.'
 	},
 	{
-		heading: 'Reseña 2',
-		body: 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'
+		heading: 'Alberto',
+		body: 'Yolanda, magnífica profesional, implicada, sincera, muy cuidadora de las personas, si tienes cualquier tipo de dolencia, física, de rehabilitación y las en no pocas ocasiones, las que más quebraderos de cabeza te pueden traer, que son las internas, las que no se ven...!!! Ella, te ayudará a sanar 😉😉😉😉👍 invierte en cuidarte, ganarás salud y calidad de vida!!!'
 	},
 	{
-		heading: 'Reseña 3',
-		body: 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'
+		heading: 'Ángela',
+		body: 'Fui diagnosticada de hipotiroidismo, y me propuse terapias alternativas.....empecé acupuntura con Yoli, y en unos meses equilibre esos valores que tenía alterados..... En alguna ocasión me he contracturado y también me ha sido útil... Un gran descubrimiento....graciasss ☺️'
 	},
-	{
-		heading: 'Reseña 4',
-		body: 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'
-	}
+
+
 ];
 
 export const services: Service[] = [
