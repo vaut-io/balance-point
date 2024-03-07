@@ -1,11 +1,11 @@
 <section aria-label="balance point" id="hero" class="top-padding-large bottom-padding-medium">
 	<div class="gutter">
-		<div class="hero-body flow">
+		<div class="flow-deep">
 			<hgroup>
 				<h1>
 					Donde la salud encuentra su punto de <em>equilibrio</em>
 				</h1>
-				<p style="margin-block-start: var(--l-xl);">
+				<p class="flow-l-xl">
 					Nuestro enfoque holístico y personalizado te ayuda a encontrar tu equilibrio interior y
 					mejorar tu calidad de vida de manera integral.
 				</p>
@@ -32,7 +32,7 @@
 		padding-block-start: calc(var(--3xl-4xl));
 		padding-block-end: var(--2xl-3xl);
 		/* border-block-end: 0.5rem solid var(--color-tertiary-tint); */
-		background-color: var(--color-tertiary-shade);
+		background-color: var(--color-tertiary-dark);
 		background-image: url('img/equilibrio.jpg');
 		background-position: center;
 		background-repeat: no-repeat;
@@ -47,11 +47,8 @@
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background-color: hsl(var(--color-tertiary-shade-hsl) / 0.7);
+		background-color: hsl(var(--color-tertiary-dark-hsl) / 0.7);
 		backdrop-filter: blur(12px);
-	}
-	hgroup {
-		/* max-inline-size: 100ch; */
 	}
 	a:hover {
 		text-decoration: underline;

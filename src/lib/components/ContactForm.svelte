@@ -1,21 +1,15 @@
-<form action="" class="flow">
-	<div class="flow-tight">
+<form action="">
+	<div class="flow flow-s-m">
 		<label for="nombre">Nombre</label>
-		<input id="nombre" type="text" placeholder="Nombre" />
-	</div>
-	<div class="flow-tight">
+		<input class="flow-3xs-2xs" id="nombre" type="text" placeholder="Nombre" />
 		<label for="telefono">Teléfono</label>
-		<input id="telefono" type="text" placeholder="Teléfono" />
-	</div>
-	<div class="flow-tight">
+		<input class="flow-3xs-2xs" id="telefono" type="text" placeholder="Teléfono" />
 		<label for="asunto">Asunto</label>
-		<input id="asunto" type="text" placeholder="Asunto" />
-	</div>
-	<div class="flow-tight">
+		<input class="flow-3xs-2xs" id="asunto" type="text" placeholder="Asunto" />
 		<label for="mensaje">Mensaje</label>
-		<textarea id="mensaje" placeholder="Mensaje"></textarea>
+		<textarea class="flow-3xs-2xs" id="mensaje" placeholder="Mensaje"></textarea>
+		<button type="submit" class="button"><strong>Someter</strong></button>
 	</div>
-	<button type="submit" class="button"><strong>Someter</strong></button>
 </form>
 
 <style>

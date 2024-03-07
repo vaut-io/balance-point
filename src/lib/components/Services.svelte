@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Image } from "$lib/components";
+	// import { Image } from "$lib/components";
 	import { type Service } from '$lib/data';
-	export let service: Service;
-	export let reverse = false;
+	export let services: Service[];
+	// export let reverse = false;
 </script>
 
 <!-- <div class="has-sidebar" class:reverse>
@@ -15,25 +15,37 @@
 			height={20}
 		/>
 	</div>
-	<div class="main flow-tight">
+	<div>
 		<h3>{service.heading}</h3>
 		<p>{service.body}</p>
 	</div>
 </div> -->
 
+<ul role="list" class="flow-m-l">
+	{#each services as service}
+		<li>
+			<h3>{service.heading}</h3>
+			<p>{service.body}</p>
+		</li>
+	{/each}
+</ul>
 
-<div class="flow-tight">
-	<h3>{service.heading}</h3>
-	<p>{service.body}</p>
-</div>
 <!-- <div class="service-card" style="background-image: url('img/{service.image}.jpg')">
-	<div class="flow-tight">
+	<div>
 		<h3>{service.heading}</h3>
 		<p>{service.body}</p>
 	</div>
 </div> -->
 
 <style>
+	.services-grid {
+		--minimum: 40ch;
+		display: grid;
+		grid-gap: var(--xs-s);
+		grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
+		grid-auto-rows: 1fr;
+	}
+
 	.service-card {
 		position: relative;
 		isolation: isolate;
@@ -44,7 +56,6 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		/* color: var(--color-primary); */
 	}
 	.service-card::before{
 		content: '';

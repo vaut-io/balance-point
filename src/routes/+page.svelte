@@ -1,8 +1,7 @@
 <script lang="ts">
 	import '../app.css';
-	import { ContactForm, Footer, Header, Hero } from '$lib/components';
+	import { ContactForm, Footer, Header, Hero, Reviews, Services } from '$lib/components';
 	import { reviews, services } from '$lib/data';
-	import { ReviewCard, ServiceCard } from '$lib/components';
 </script>
 
 <svelte:head>
@@ -22,74 +21,52 @@
 
 <main>
 	<Hero />
-
 	<section aria-label="servicios" id="servicios" class="top-padding-large bottom-padding-large" style="background-color: var(--color-light)">
-		<div class="gutter">
-			<div class="flow-loose">
-				<hgroup class="flow-tight">
-					<h2>Nuestros Servicios</h2>
-					<p>
-						Ofrecemos una amplia gama de tratamientos naturales para abordar una variedad de
-						necesidades de salud y bienestar:
-					</p>
-				</hgroup>
-
-				<ul role="list" class="flow-loose">
-					{#each services as service, i}
-						{#if i % 2 === 0}
-							<li>
-								<ServiceCard {service} />
-							</li>
-						{:else}
-							<li>
-								<ServiceCard {service} reverse />
-							</li>
-						{/if}
-					{/each}
-				</ul>
-			</div>
+		<div class="gutter flow-deep">
+			<hgroup>
+				<h2>Nuestros Servicios</h2>
+				<hr>
+				<p>
+					Ofrecemos una amplia gama de tratamientos naturales para abordar una variedad de
+					necesidades de salud y bienestar:
+				</p>
+			</hgroup>
+			<Services {services} />
 		</div>
 	</section>
 
-	<section aria-label="conocenos" class="top-padding-large bottom-padding-large" style="background-color: var(--color-primary-tint);">
-		<div class="gutter flow-loose">
+	<section aria-label="conocenos" class="theme-primary top-padding-large bottom-padding-large">
+		<div class="gutter flow">
 			<h2 id="conocenos">Conócenos</h2>
-			<div class="flow-tight">
-				<h3>Nuestro Filosofía</h3>
-				<p>
-					En Balance Point, creemos en el poder curativo inherente del cuerpo y en la importancia de abordar la salud de manera integral. Nos esforzamos por proporcionar un ambiente acogedor y de apoyo donde puedas sentirte cómodo y seguro mientras trabajamos juntos para alcanzar tus objetivos de salud y bienestar.
-				</p>
-			</div>
-			<div class="flow-tight">
-				<h3>Nuestro Compromiso</h3>
-				<p>
-					Nos comprometemos a brindarte una atención personalizada y de alta calidad en cada sesión.
-					Nuestro equipo de terapeutas altamente capacitados está aquí para escucharte,
-					proporcionarte orientación experta y ayudarte en tu viaje hacia una vida más equilibrada y
-					saludable.
-				</p>
-			</div>
+			<hr>
+			<h3>Nuestro Filosofía</h3>
+			<p>
+				En Balance Point, creemos en el poder curativo inherente del cuerpo y en la importancia de abordar la salud de manera integral. Nos esforzamos por proporcionar un ambiente acogedor y de apoyo donde puedas sentirte cómodo y seguro mientras trabajamos juntos para alcanzar tus objetivos de salud y bienestar.
+			</p>
+			<h3>Nuestro Compromiso</h3>
+			<p>
+				Nos comprometemos a brindarte una atención personalizada y de alta calidad en cada sesión.
+				Nuestro equipo de terapeutas altamente capacitados está aquí para escucharte,
+				proporcionarte orientación experta y ayudarte en tu viaje hacia una vida más equilibrada y
+				saludable.
+			</p>
 		</div>
 	</section>
 
 	<section aria-label="reseñas" id="resenas" class="top-padding-large bottom-padding-large">
-		<div class="gutter">
-			<div class="flow-loose">
-				<h2>Reseñas</h2>
-				<div class="reviews-grid">
-					{#each reviews as review}
-						<ReviewCard {review} />
-					{/each}
-				</div>
-			</div>
+		<div class="gutter flow flow-l-xl">
+			<h2>Reseñas</h2>
+			<hr>
+			<Reviews {reviews} />
 		</div>
 	</section>
 
-	<section aria-label="precios" id="precios" class="top-padding-large bottom-padding-large" style="background-color: var(--color-secondary-tint)">
+	<section aria-label="precios" id="precios" class="theme-secondary top-padding-large bottom-padding-large">
 		<div class="gutter">
 			<div class="flow">
 				<h2>Precios</h2>
-				<p>...</p>
+				<hr>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui odio eaque perferendis quis tempore perspiciatis omnis, veniam aperiam nulla voluptas. Ipsum, qui dignissimos autem ipsam ipsa repudiandae eligendi accusantium commodi?</p>
 			</div>
 		</div>
 	</section>
@@ -100,12 +77,13 @@
 		class="top-padding-large bottom-padding-large"
 	>
 		<div class="gutter">
-			<div class="flow">
+			<div class="flow flow-m-l">
 				<h2>Reserva Cita</h2>
-				<p>
+				<hr style="color: var(--color-tertiary-tint);">
+				<!-- <p>
 					¡Da el primer paso hacia una mejor salud y bienestar hoy mismo! Contáctanos para aclarar
 					tus dudas.
-				</p>
+				</p> -->
 				<ContactForm />
 			</div>
 		</div>
@@ -114,17 +92,28 @@
 <Footer />
 
 <style>
-	.services-grid {
-		--minimum: 40ch;
-		display: grid;
-		grid-gap: var(--xs-s);
-		grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
-		grid-auto-rows: 1fr;
+	.theme-primary {
+		color: var(--color-primary-dark);
+		background-color: var(--color-primary-glare);
 	}
-	.reviews-grid {
-		--minimum: 40ch;
-		display: grid;
-		grid-gap: var(--xl-2xl);
-		grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
+	.theme-primary p {
+		color: var(--color-primary-shade);
+	}
+	.theme-primary hr {
+		color: var(--color-primary-tint);
+	}
+	.theme-secondary {
+		color: var(--color-secondary-dark);
+		background-color: var(--color-secondary-glare);
+	}
+	.theme-secondary p {
+		color: var(--color-secondary-shade);
+	}
+	.theme-secondary hr {
+		color: var(--color-secondary-tint);
+	}
+	h2 {
+		color: var(--color-tertiary-dark);
+		text-align: end;
 	}
 </style>

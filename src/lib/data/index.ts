@@ -41,7 +41,7 @@ export const services: Service[] = [
 	{
 		heading: 'Biomagnetismo',
 		image: 'biomagnetismo',
-		body: '...'
+		body: 'Esta terapia se basa en la idea de que ciertas enfermedades son causadas por desequilibrios en el pH del cuerpo, y al colocar imanes en puntos específicos, se pueden neutralizar microorganismos dañinos.'
 	}
 ];
 

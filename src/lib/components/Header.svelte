@@ -14,7 +14,6 @@
 
 <style>
 	header {
-		/* height: 0; */
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -44,11 +43,9 @@
 	nav {
 		display: flex;
 		flex-wrap: wrap;
-		/* justify-content: space-between; */
 		justify-content: space-between;
 		align-items: center;
 		gap: 0.5rem 8rem;
-		/* block-size: 3rem; */
 		padding-block-start: 1rem;
 	}
 
@@ -60,23 +57,17 @@
 		}
 	}
 
-	/* nav > * {
-		margin-inline: auto;
-	} */
-
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		column-gap: 1.5rem;
 		row-gap: 0.5rem;
-		/* justify-content: center; */
 	}
 
 	li {
 		font-size: var(--t-1);
 	}
 	a:is(:hover, :active) {
-		/* color: var(--color-secondary); */
 		text-decoration: underline;
 	}
 </style>

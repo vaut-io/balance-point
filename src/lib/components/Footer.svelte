@@ -1,30 +1,15 @@
-<footer id="footer" class="top-padding-large bottom-padding-medium">
+<footer id="footer" class="top-padding-medium bottom-padding-medium">
 	<div class="gutter">
 		<div class="flow">
 			<h2>Condiciones</h2>
 			<p>
-				(Este espacio no está diseñado para reservar cita ni para dar tramiento solo para resolver
-				dudas)
+				<small>
+					Las cancelaciones hay que hacerlas con una anterlación de 24h, avisando la la antelación
+					debida no se duvuelve el dinero, sino que se cambia cita para oto dia. Se pueden hacer bonos
+					de acupuntura de 5 y 10 sesiones los bonos pueden se pueden utilizar varias personas.
+				</small>
 			</p>
-			<p>
-				Las cancelaciones hay que hacerlas con una anterlación de 24h, avisando la la antelación
-				debida no se duvuelve el dinero, sino que se cambia cita para oto dia. Se pueden hacer bonos
-				de acupuntura de 5 y 10 sesiones los bonos pueden se pueden utilizar varias personas.
-			</p>
-			<!-- <h1>h1</h1> -->
-			<!-- <h2>h2</h2> -->
-			<!-- <h3>h3</h3> -->
-			<!-- <h4>h4</h4> -->
-			<!-- <p>p</p> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-light)"></div> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-mid);"></div> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-dark);"></div> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-primary-tint)"></div> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-primary)"></div> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-primary-shade)"></div> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-secondary-tint)"></div> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-secondary)"></div> -->
-			<!-- <div style="padding: 1rem; background-color: var(--color-secondary-shade)"></div> -->
+			<p><small> &copy; {new Date().getFullYear()} Balance Point </small></p>
 		</div>
 	</div>
 </footer>
@@ -33,5 +18,8 @@
 	footer {
 		background-color: var(--color-mid);
 		color: var(--color-light);
+	}
+	h2 {
+		font-size:var(--t2)
 	}
 </style>
