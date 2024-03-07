@@ -30,7 +30,7 @@
 	{/each}
 </ul>
 
-<!-- <div class="service-card" style="background-image: url('img/{service.image}.jpg')">
+<!-- <div class="service-card" style="background-image: url('/img/{service.image}.jpg')">
 	<div>
 		<h3>{service.heading}</h3>
 		<p>{service.body}</p>

@@ -32,7 +32,7 @@
 		padding-block-end: var(--2xl-3xl);
 		/* border-block-end: 0.5rem solid var(--color-tertiary-tint); */
 		background-color: var(--color-tertiary-darkest);
-		background-image: url('img/equilibrio-midres.jpg');
+		background-image: url('/img/equilibrio-midres.jpg');
 		background-position: center;
 		background-repeat: no-repeat;
 		/* background-attachment: fixed; */
