@@ -1,4 +1,5 @@
 <script lang="ts">
+	import 'iconify-icon';
 	import { type Review } from '$lib/data';
 	export let reviews: Review[];
 </script>
@@ -6,16 +7,16 @@
 <div class="reviews-switcher">
 	{#each reviews as review}
 		<div class="review-card">
-			<iconify-icon class="quote" icon="raphael:quote" height="var(--3xl-4xl)" style="color: var(--color-neutral-light)" />
+			<iconify-icon icon="raphael:quote" class="quote" />
 			<article class="flow">
 				<h3>{review.heading}</h3>
 				<p>{review.body}</p>
-				<div class="flow-2xs-xs" style="color: var(--color-primary-light)">
-					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
-					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
-					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
-					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
-					<iconify-icon icon="material-symbols:star" height="var(--m-l)" />
+				<div class="stars flow-2xs-xs">
+					<iconify-icon icon="material-symbols:star" />
+					<iconify-icon icon="material-symbols:star" />
+					<iconify-icon icon="material-symbols:star" />
+					<iconify-icon icon="material-symbols:star" />
+					<iconify-icon icon="material-symbols:star" />
 				</div>
 			</article>
 
@@ -53,5 +54,11 @@
 		left: calc(var(--m-l) * -1.5);
 		z-index: -1;
 		opacity: 0.5;
+		font-size: var(--3xl-4xl);
+		color: var(--color-neutral-light);
+	}
+	.stars {
+		font-size: var(--m-l);
+		color: var(--color-primary-light);
 	}
 </style>

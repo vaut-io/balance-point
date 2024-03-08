@@ -1,3 +1,7 @@
+<script lang="ts">
+	import 'iconify-icon';
+</script>
+
 <section aria-label="balance point" id="hero" class="top-padding-large bottom-padding-medium">
 	<div class="gutter flow-deep">
 		<hgroup>
@@ -60,6 +64,5 @@
 	.with-icon {
 		display: inline-flex;
 		align-items: center;
-
 	}
 </style>

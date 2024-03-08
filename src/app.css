@@ -9,8 +9,8 @@
     --f-screen: 100vw;
     --f-bp: calc((var(--f-screen) - var(--f-min-width) / 16 * 1rem) / (var(--f-max-width) - var(--f-min-width)));
 }
-@media screen and (max-width: 320px) { :root { --f-screen: calc(var(--f-min-width) * 1px); } }
-@media screen and (min-width: 1200px) { :root { --f-screen: calc(var(--f-max-width) * 1px); } }
+@media screen and (max-width: 20rem) { :root { --f-screen: calc(var(--f-min-width) * 1px); } }
+@media screen and (min-width: 80rem) { :root { --f-screen: calc(var(--f-max-width) * 1px); } }
 
 /* Type scale */
 :root {
@@ -148,7 +148,7 @@
     --tracking-base: +0ch;
     --tracking-special: +0ch;
     /* Fonts */
-    --font-base: 'Source Sans 3', serif;
+    --font-base: 'Source Sans 3', sans-serif;
     --font-special: 'Playfair Display', serif;
     /* Font weights */
     --weight-normal: 400;
