@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('$lib/fonts/playfairdisplay-italic-variable.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('$lib/fonts/playfairdisplay-variable.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url('$lib/fonts/sourcesans3-italic-variable.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url('$lib/fonts/sourcesans3-variable.ttf') format('truetype');
+}
 :root {
     /* Fluid screen widths (px), must match media queries below */
     --f-min-width: 320; --f-max-width: 1200;
