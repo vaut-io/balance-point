@@ -56,7 +56,7 @@
 		color: var(--color-neutral-light);
 	}
 	.stars {
-		font-size: var(--m-l);
+		font-size: var(--s-m);
 		color: var(--color-primary-light);
 	}
 </style>

@@ -15,7 +15,7 @@
 	</div>
 	<label for="mensaje">Mensaje</label>
 	<textarea class="flow-3xs-2xs" id="mensaje" placeholder="Mensaje" required></textarea>
-	<button type="submit" class="button flow-l-xl"><strong>Someter</strong></button>
+	<button type="submit" class="button flow-m-l"><strong>Someter</strong></button>
 </form>
 
 <style>

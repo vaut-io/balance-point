@@ -99,7 +99,7 @@
     --2xs-xs: calc(((var(--2xs-min) / 16) * 1rem) + (var(--xs-max) - var(--2xs-min)) * var(--f-bp));
     --xs-s: calc(((var(--xs-min) / 16) * 1rem) + (var(--s-max) - var(--xs-min)) * var(--f-bp));
     --s-m: calc(((var(--s-min) / 16) * 1rem) + (var(--m-max) - var(--s-min)) * var(--f-bp));
-    --m-l: calc(((var(--m-min) / 16) * 1rem) + (var(--m-max) - var(--m-min)) * var(--f-bp));
+    --m-l: calc(((var(--m-min) / 16) * 1rem) + (var(--l-max) - var(--m-min)) * var(--f-bp));
     --l-xl: calc(((var(--l-min) / 16) * 1rem) + (var(--xl-max) - var(--l-min)) * var(--f-bp));
     --xl-2xl: calc(((var(--xl-min) / 16) * 1rem) + (var(--2xl-max) - var(--xl-min)) * var(--f-bp));
     --2xl-3xl: calc(((var(--2xl-min) / 16) * 1rem) + (var(--3xl-max) - var(--2xl-min)) * var(--f-bp));
@@ -184,8 +184,8 @@
     --font-base: 'Source Sans 3', sans-serif;
     --font-special: 'Playfair Display', serif;
     /* Font weights */
-    --weight-normal: 400;
-    --weight-bold: 700;
+    --weight-normal: 350;
+    --weight-bold: 600;
     /* Transitions */
     --transition-base: 250ms ease;
     --transition-movement: 200ms linear;
@@ -217,6 +217,7 @@ body {
     font-family: var(--font-base);
     letter-spacing: var(--tracking-base);
     font-size: var(--t0);
+    font-weight: var(--weight-normal);
     /* overflow-wrap: break-word; */
     /* -webkit-hyphens: auto; */
     /* -moz-hyphens: auto; */
@@ -280,6 +281,8 @@ p { max-inline-size: var(--measure); text-wrap: pretty; }
 a { text-decoration: none; color: inherit; }
 
 p, hr {  --flow-space: var(--xs-s); }
+
+strong { font-weight: var(--weight-bold); }
 
 
 /* Global classes */

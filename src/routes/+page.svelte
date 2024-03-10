@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { ContactForm, Footer, Header, Hero, Reviews, Services } from '$lib/components';
 	import { reviews, services } from '$lib/data';
+	import 'iconify-icon';
 </script>
 
 <svelte:head>
@@ -89,17 +90,64 @@
 		class="top-padding-large bottom-padding-large"
 	>
 		<div class="gutter">
-			<div class="flow flow-m-l">
+			<div class="flow flow-xl-2xl">
 				<h2>Reserva Cita</h2>
-				<hr />
-				<!-- <p>
-					¡Da el primer paso hacia una mejor salud y bienestar hoy mismo! Contáctanos para aclarar
-					tus dudas.
-				</p> -->
-				<ContactForm />
+
+				<!-- ¡Da el primer paso hacia una mejor salud y bienestar hoy mismo! Contáctanos para aclarar tus dudas. -->
+				<p class="whatsapp-contact flow-m-l">
+					<a href="https://api.whatsapp.com" class="with-icon">
+						<span class="text">
+							Haz clic aquí para contactar con nosotros en WhatsApp
+						</span>
+						<iconify-icon icon="mdi:whatsapp" height="1.5em" class="whatsapp-icon"></iconify-icon>
+					</a>
+				</p>
+
+				<!-- <p>- o rellena este formulario: -</p> -->
+
+
+				<div>
+					<ContactForm />
+				</div>
 			</div>
 		</div>
 	</section>
 </main>
 
 <Footer />
+
+<style>
+	.whatsapp-icon {
+		z-index: 999;
+	}
+
+	#reserva-cita h2 {
+		text-align: center;
+	}
+
+	.whatsapp-contact {
+		margin-inline: auto;
+		text-align: center;
+		font-size: var(--t1);
+		color: var(--color-primary-dark);
+		font-weight: var(--weight-bold);
+	}
+
+	.with-icon {
+		padding-block: 0.5rem;
+		border-block: 2px solid var(--color-primary);
+	}
+
+	.with-icon {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--3xs-2xs);
+		/* text-decoration: underline; */
+	}
+
+
+	.with-icon:hover {
+		text-decoration: underline;
+		/* color: var(--color-primary) */
+	}
+</style>

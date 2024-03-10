@@ -4,15 +4,17 @@
 			<h2>Condiciones</h2>
 			<p>
 				<small>
-					Las cancelaciones hay que hacerlas con una anterlación de 24h, avisando la la antelación
-					debida no se duvuelve el dinero, sino que se cambia cita para oto dia. Se pueden hacer
-					bonos de acupuntura de 5 y 10 sesiones los bonos pueden se pueden utilizar varias
+					Las cancelaciones hay que hacerlas con una anterlación de 24h, avisando la antelación
+					debida no se devuelve el dinero, sino que se cambia cita para otro dia. Se pueden hacer
+					bonos de acupuntura de 5 y 10 sesiones. Los bonos se pueden utilizar varias
 					personas.
 				</small>
 			</p>
 			<p><small> &copy; {new Date().getFullYear()} Balance Point </small></p>
 		</div>
 	</div>
+
+
 </footer>
 
 <style>
