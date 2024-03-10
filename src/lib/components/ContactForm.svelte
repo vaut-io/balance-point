@@ -5,7 +5,7 @@
 			<input  id="nombre" type="text" placeholder="Nombre" required />
 		</div>
 		<div class="flow flow-3xs-2xs">
-			<label for="correo">Teléfono</label>
+			<label for="correo">Correo</label>
 			<input  id="correo" type="email" placeholder="Correo" required />
 		</div>
 		<div class="flow flow-3xs-2xs">
