@@ -19,11 +19,9 @@
 					<iconify-icon icon="material-symbols:star" />
 				</div>
 			</article>
-
 		</div>
 	{/each}
 </div>
-
 
 <style>
 	.reviews-switcher {

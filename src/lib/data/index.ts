@@ -10,9 +10,7 @@ export const reviews: Review[] = [
 	{
 		heading: 'Alberto',
 		body: 'Magnífica profesional - implicada, sincera, muy cuidadora de las personas. Ella te ayudará a sanar. ¡Invierte en cuidarte, ganarás salud y calidad de vida!'
-	},
-
-
+	}
 ];
 
 export const services: Service[] = [

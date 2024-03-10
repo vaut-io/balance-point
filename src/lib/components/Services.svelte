@@ -21,21 +21,22 @@
 	</div>
 </div> -->
 
-<ul role="list" class="flow-m-l">
+<ul role="list" class="services-grid flow-m-l">
 	{#each services as service}
 		<li>
 			<h3>{service.heading}</h3>
 			<p>{service.body}</p>
+
+			<div class="service-card" style="background-image: url('/img/{service.image}.jpg')">
+				<div>
+					<h3>{service.heading}</h3>
+					<p>{service.body}</p>
+				</div>
+			</div>
 		</li>
 	{/each}
 </ul>
 
-<!-- <div class="service-card" style="background-image: url('/img/{service.image}.jpg')">
-	<div>
-		<h3>{service.heading}</h3>
-		<p>{service.body}</p>
-	</div>
-</div> -->
 
 <style>
 	.services-grid {
@@ -57,7 +58,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-	.service-card::before{
+	.service-card::before {
 		content: '';
 		display: block;
 		position: absolute;
@@ -92,4 +93,3 @@
 		flex-direction: row-reverse;
 	}
 </style>
-

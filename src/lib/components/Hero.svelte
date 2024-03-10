@@ -44,7 +44,7 @@
 		color: var(--color-tertiary-light);
 		text-align: center;
 	}
-	#hero::before{
+	#hero::before {
 		content: '';
 		display: block;
 		position: absolute;

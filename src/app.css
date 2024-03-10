@@ -1,3 +1,6 @@
+/* Global styles go here */
+
+/* Fonts */
 @font-face {
     font-family: 'Playfair Display';
     font-style: italic;
@@ -27,6 +30,7 @@
     src: url('$lib/fonts/sourcesans3-variable.woff2') format('woff2');
 }
 
+/* Fluid type and spacing system */
 :root {
     /* Fluid screen widths (px), must match media queries below */
     --f-min-width: 320; --f-max-width: 1200;
@@ -38,8 +42,8 @@
     --f-screen: 100vw;
     --f-bp: calc((var(--f-screen) - var(--f-min-width) / 16 * 1rem) / (var(--f-max-width) - var(--f-min-width)));
 }
-@media screen and (max-width: 20rem) { :root { --f-screen: calc(var(--f-min-width) * 1px); } }
-@media screen and (min-width: 80rem) { :root { --f-screen: calc(var(--f-max-width) * 1px); } }
+@media screen and (max-width: 320px) { :root { --f-screen: calc(var(--f-min-width) * 1px); } }
+@media screen and (min-width: 1200px) { :root { --f-screen: calc(var(--f-max-width) * 1px); } }
 
 /* Type scale */
 :root {
@@ -286,29 +290,4 @@ p, hr {  --flow-space: var(--xs-s); }
     margin-inline: auto;
     max-inline-size: calc(var(--f-max-width) * 1px);
     padding-inline: var(--s-m);
-}
-
-.button {
-    position: relative;
-    isolation: isolate;
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    color: var(--color-neutral-lightest);
-    background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-tertiary));
-}
-.button:is(:hover, :active) {
-    color: var(--color-neutral-lightest);
-}
-.button::before {
-    position: absolute;
-    content: '';
-    inset: 0;
-    z-index: -1;
-    border-radius: 0.5rem;
-    background-image: linear-gradient(to bottom right, var(--color-neutral), var(--color-neutral-darkest));
-    transition: opacity var(--transition-base);
-    opacity: 0;
-}
-.button:hover::before {
-  opacity: 1;
 }

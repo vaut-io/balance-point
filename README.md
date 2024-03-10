@@ -2,14 +2,12 @@
 
 ## To-do
 
-- Add fonts
-- Add more colors
-- Add favicon
+- Add Whatsapp button (https://api.whatsapp.com/send?phone=+34649818372&text=Hola!)
 - Add sitemap
-- Add SEO (meta description, better titles and content related to Meco, Alcalá, Guadalajara)
+- Add scroll bar and text highlight colors
+- Add SEO (meta description)
 - Add enhanced images
 - Add melt ui (?)
-- Add scroll bar and text highlight colors
 
 ## Requirements
 
