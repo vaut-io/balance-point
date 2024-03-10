@@ -64,7 +64,7 @@
 		class="theme-neutral top-padding-large bottom-padding-large"
 	>
 		<div class="gutter flow flow-xl-2xl">
-			<h2>Lo que dicen los clientes...</h2>
+			<h2>¡Clientes Satisfechos!</h2>
 			<!-- <hr /> -->
 			<Reviews {reviews} />
 		</div>
