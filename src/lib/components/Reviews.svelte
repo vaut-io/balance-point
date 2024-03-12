@@ -1,7 +1,25 @@
 <script lang="ts">
 	import 'iconify-icon';
-	import { type Review } from '$lib/data';
-	export let reviews: Review[];
+
+	const reviews: Review[] = [
+		{
+			heading: 'Aurora',
+			body: 'Yolanda es amable, te escucha, te acompaña y comparte sus conocimientos. Gracias a ella avancé espiritualmente y sané heridas pasadas. ¡Agradezco haberla encontrado, una gran profesional!'
+		},
+		{
+			heading: 'Ángela',
+			body: 'Empecé acupuntura con Yoli, y en unos meses equilibre los valores de hipotiriodismo que tenía alterados. En alguna ocasión me he contracturado y también me ha sido útil. ¡Un gran descubrimiento, gracias!'
+		},
+		{
+			heading: 'Alberto',
+			body: 'Magnífica profesional - implicada, sincera, muy cuidadora de las personas. Ella te ayudará a sanar. ¡Invierte en cuidarte, ganarás salud y calidad de vida!'
+		}
+	];
+
+	type Review = {
+		heading: string;
+		body: string;
+	};
 </script>
 
 <div class="reviews-switcher">
@@ -28,23 +46,15 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--m-l);
-		/* --minimum: 30ch; */
-		/* display: grid; */
-		/* grid-gap: var(--m-l); */
-		/* grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr)); */
 	}
-
 	.reviews-switcher > * {
 		flex-grow: 1;
 		flex-basis: calc((var(--measure) - 100%) * 999);
 	}
 	.review-card {
-		/* padding: var(--m-l); */
 		position: relative;
 		isolation: isolate;
 		font-style: italic;
-		/* background-color: var(--color-neutral-light); */
-		/* color: var(--color-neutral-light); */
 	}
 	.quote {
 		position: absolute;

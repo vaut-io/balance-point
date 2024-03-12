@@ -1,8 +1,19 @@
 <script lang="ts">
 	import 'iconify-icon';
+
+	import EquilibrioImage from '$lib/images/equilibrio.jpg?w=400&format=avif'
+	import { onMount } from 'svelte';
+	let hero: HTMLElement;
+
+	onMount(() => {
+		// hero.style.backgroundImage = 'url(\'/img/equilibrio.avif\')'
+	})
+	// background-image: url('/img/equilibrio.avif');
 </script>
 
-<section aria-label="balance point" id="hero" class="top-padding-large bottom-padding-medium">
+<svelte:document />
+
+<section aria-label="balance point" id="hero" class="top-padding-large bottom-padding-medium" bind:this={hero} style="background-image: url({EquilibrioImage})">
 	<div class="gutter flow-deep">
 		<hgroup>
 			<h1>
@@ -36,13 +47,13 @@
 		padding-block-end: var(--2xl-3xl);
 		/* border-block-end: 0.5rem solid var(--color-tertiary-tint); */
 		background-color: var(--color-tertiary-darkest);
-		background-image: url('/img/equilibrio.avif');
 		background-position: center;
 		background-repeat: no-repeat;
 		/* background-attachment: fixed; */
 		background-size: cover;
 		color: var(--color-tertiary-light);
 		text-align: center;
+		z-index: 40;
 	}
 	#hero::before {
 		content: '';

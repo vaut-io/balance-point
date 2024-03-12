@@ -13,6 +13,15 @@
 	/>
 </svelte:head>
 
+<div class="banner">
+	<p class="gutter flow-m-l">
+		<a href="https://api.whatsapp.com" target="_blank">
+			<span>Haz clic aquí para contactar con nosotros en WhatsApp</span>
+			<iconify-icon icon="mdi:whatsapp" height="1.5em" class="whatsapp-icon"></iconify-icon>
+		</a>
+	</p>
+</div>
+
 <Header />
 
 <main>
@@ -25,7 +34,6 @@
 		<div class="gutter flow-deep">
 			<hgroup>
 				<h2>Nuestros Servicios</h2>
-				<hr />
 				<p>
 					Ofrecemos una amplia gama de tratamientos naturales para abordar una variedad de
 					necesidades de salud y bienestar:
@@ -95,10 +103,8 @@
 
 				<!-- ¡Da el primer paso hacia una mejor salud y bienestar hoy mismo! Contáctanos para aclarar tus dudas. -->
 				<p class="whatsapp-contact flow-m-l">
-					<a href="https://api.whatsapp.com" class="with-icon">
-						<span class="text">
-							Haz clic aquí para contactar con nosotros en WhatsApp
-						</span>
+					<a href="https://api.whatsapp.com" target="_blank">
+						<span>Haz clic aquí para contactar con nosotros en WhatsApp</span>
 						<iconify-icon icon="mdi:whatsapp" height="1.5em" class="whatsapp-icon"></iconify-icon>
 					</a>
 				</p>
@@ -118,7 +124,7 @@
 
 <style>
 	.whatsapp-icon {
-		z-index: 999;
+		flex-shrink: 0;
 	}
 
 	#reserva-cita h2 {
@@ -133,21 +139,42 @@
 		font-weight: var(--weight-bold);
 	}
 
-	.with-icon {
+	.whatsapp-contact a {
 		padding-block: 0.5rem;
 		border-block: 2px solid var(--color-primary);
-	}
-
-	.with-icon {
 		display: inline-flex;
 		align-items: center;
-		gap: var(--3xs-2xs);
-		/* text-decoration: underline; */
+		gap: 0.5rem;
+	}
+
+	a:hover {
+		text-decoration: underline;
+		/* color: var(--color-primary) */
 	}
 
 
-	.with-icon:hover {
-		text-decoration: underline;
-		/* color: var(--color-primary) */
+	.banner {
+		position: fixed;
+		inline-size: 100%;
+		padding-block: 0.5rem;
+		background-color: var(--color-secondary-dark);
+		color: var(--color-secondary-lightest);
+		/* border-block-start: 2px solid var(--color-secondary); */
+		bottom: 0;
+		z-index: 30;
+		line-height: var(--leading-tight);
+	}
+
+	.banner > p {
+		text-align: end;
+		margin-inline: auto;
+		font-size: var(--t-1);
+		font-weight: var(--weight-bold);
+	}
+
+	.banner a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 </style>

@@ -6,8 +6,6 @@
 - Add sitemap
 - Add scroll bar and text highlight colors
 - Add SEO (meta description)
-- Add enhanced images
-- Add melt ui (?)
 
 ## Requirements
 

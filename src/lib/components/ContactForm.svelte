@@ -1,14 +1,14 @@
 <form action="" class="flow flow-s-m">
 	<div class="inputs-switcher">
-		<div class="flow flow-3xs-2xs">
+		<div class="flow">
 			<label for="nombre">Nombre</label>
 			<input  id="nombre" type="text" placeholder="Nombre" required />
 		</div>
-		<div class="flow flow-3xs-2xs">
+		<div class="flow">
 			<label for="correo">Correo</label>
 			<input  id="correo" type="email" placeholder="Correo" required />
 		</div>
-		<div class="flow flow-3xs-2xs">
+		<div class="flow">
 			<label for="asunto">Asunto</label>
 			<input  id="asunto" type="text" placeholder="Asunto" required />
 		</div>
@@ -20,11 +20,16 @@
 
 <style>
 	form {
-		/* max-inline-size: var(--measure); */
 		flex-wrap: wrap;
 	}
 	label {
 		display: block;
+	}
+	input {
+		--flow-space: var(--3xs-2xs);
+	}
+	textarea {
+		max-block-size: 40rem;
 	}
 	input,
 	textarea {
@@ -32,10 +37,6 @@
 		padding: 0.75rem 0.5rem;
 		border: 2px solid var(--color-neutral-light);
 		border-radius: 0.5rem;
-	}
-
-	textarea {
-		max-block-size: 40rem;
 	}
 
 	.inputs-switcher {

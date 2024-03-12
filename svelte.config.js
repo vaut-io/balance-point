@@ -1,12 +1,9 @@
-import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-
-/** @type {import('@sveltejs/kit').Config} */
+import { preprocessMeltUI, sequence } from '@melt-ui/pp';
+import adapter from '@sveltejs/adapter-static';
+/** @type {import('@sveltejs/kit').Config}*/
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	preprocess: vitePreprocess(),
-
+	preprocess: sequence([vitePreprocess(), preprocessMeltUI()]),
 	kit: {
 		adapter: adapter({
 			pages: 'build',
@@ -17,5 +14,4 @@ const config = {
 		})
 	}
 };
-
 export default config;

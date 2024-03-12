@@ -12,34 +12,19 @@
 	</div>
 </header>
 
+<div class="banner">
+
+</div>
+
 <style>
 	header {
 		position: absolute;
 		left: 0;
 		right: 0;
-		/* right: 0; */
-		/* top: 0.5rem; */
-		/* margin-inline: auto; */
-		/* margin-bottom: -5%; */
-		/* left: 50%; */
-		/* transform: translate(-50%, 0); */
-		/* right: -50%; */
-		/* border-block-start: 0.5rem solid var(--color-tertiary-tint); */
-		/* border-top-left-radius: 1rem; */
-		/* top: 0; */
 		z-index: 50;
 		color: var(--color-tertiary-light);
 	}
-	/* header::before {
-		content: '';
-		display: block;
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		background-color: hsl(var(--color-tertiary-shade-hsl) / 0);
-		border-bottom-left-radius: 1rem;
-		backdrop-filter: blur(16px);
-	} */
+
 	nav {
 		display: flex;
 		flex-wrap: wrap;
