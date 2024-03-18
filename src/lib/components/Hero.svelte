@@ -43,8 +43,8 @@
 		display: flex;
 		align-items: center;
 		/* block-size: 100%; */
-		padding-block-start: calc(var(--3xl-4xl));
-		padding-block-end: var(--2xl-3xl);
+		padding-block-start: calc(var(--spacing-3xl-4xl));
+		padding-block-end: var(--spacing-2xl-3xl);
 		/* border-block-end: 0.5rem solid var(--color-tertiary-tint); */
 		background-color: var(--color-tertiary-darkest);
 		background-position: center;

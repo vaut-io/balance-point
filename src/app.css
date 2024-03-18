@@ -1,4 +1,5 @@
-/* Global styles go here */
+@import 'tailwindcss/preflight' layer(base);
+@import 'tailwindcss/utilities' layer(utilities);
 
 /* Fonts */
 @font-face {
@@ -30,7 +31,6 @@
     src: url('$lib/fonts/sourcesans3-variable.woff2') format('woff2');
 }
 
-/* Fluid type and spacing system */
 :root {
     /* Fluid screen widths (px), must match media queries below */
     --f-min-width: 320; --f-max-width: 1200;
@@ -47,7 +47,7 @@
 
 /* Type scale */
 :root {
-    /* Type min and max scale */
+    /* Type scale */
     --t-1-min: calc(var(--t0-min) / var(--f-min-ratio));
     --t-1-max: calc(var(--t0-max) / var(--f-max-ratio));
     --t0-min: var(--f-min-size);
@@ -60,18 +60,7 @@
     --t3-max: calc(var(--t2-max) * var(--f-max-ratio));
     --t4-min: calc(var(--t3-min) * var(--f-min-ratio));
     --t4-max: calc(var(--t3-max) * var(--f-max-ratio));
-    /* Computed (t)ype values */
-    --t-1: calc(((var(--t-1-min) / 16) * 1rem) + (var(--t-1-max) - var(--t-1-min)) * var(--f-bp));
-    --t0: calc(((var(--t0-min) / 16) * 1rem) + (var(--t0-max) - var(--t0-min)) * var(--f-bp));
-    --t1: calc(((var(--t1-min) / 16) * 1rem) + (var(--t1-max) - var(--t1-min)) * var(--f-bp));
-    --t2: calc(((var(--t2-min) / 16) * 1rem) + (var(--t2-max) - var(--t2-min)) * var(--f-bp));
-    --t3: calc(((var(--t3-min) / 16) * 1rem) + (var(--t3-max) - var(--t3-min)) * var(--f-bp));
-    --t4: calc(((var(--t4-min) / 16) * 1rem) + (var(--t4-max) - var(--t4-min)) * var(--f-bp));
-}
-
-/* Spacing scale */
-:root {
-    /* Space min and max scale */
+    /* Space scale */
     --3xs-min: (var(--f-min-size) * 0.25);
     --3xs-max: (var(--f-max-size) * 0.25);
     --2xs-min: (var(--f-min-size) * 0.5);
@@ -94,40 +83,29 @@
     --4xl-max: (var(--f-max-size) * 8);
     --5xl-min: (var(--f-min-size) * 12);
     --5xl-max: (var(--f-max-size) * 12);
-    /* Computed space values, change the subtraction for different scaling */
-    --3xs-2xs: calc(((var(--3xs-min) / 16) * 1rem) + (var(--2xs-max) - var(--3xs-min)) * var(--f-bp));
-    --2xs-xs: calc(((var(--2xs-min) / 16) * 1rem) + (var(--xs-max) - var(--2xs-min)) * var(--f-bp));
-    --xs-s: calc(((var(--xs-min) / 16) * 1rem) + (var(--s-max) - var(--xs-min)) * var(--f-bp));
-    --s-m: calc(((var(--s-min) / 16) * 1rem) + (var(--m-max) - var(--s-min)) * var(--f-bp));
-    --m-l: calc(((var(--m-min) / 16) * 1rem) + (var(--l-max) - var(--m-min)) * var(--f-bp));
-    --l-xl: calc(((var(--l-min) / 16) * 1rem) + (var(--xl-max) - var(--l-min)) * var(--f-bp));
-    --xl-2xl: calc(((var(--xl-min) / 16) * 1rem) + (var(--2xl-max) - var(--xl-min)) * var(--f-bp));
-    --2xl-3xl: calc(((var(--2xl-min) / 16) * 1rem) + (var(--3xl-max) - var(--2xl-min)) * var(--f-bp));
-    --3xl-4xl: calc(((var(--3xl-min) / 16) * 1rem) + (var(--4xl-max) - var(--3xl-min)) * var(--f-bp));
-    --4xl-5xl: calc(((var(--4xl-min) / 16) * 1rem) + (var(--5xl-max) - var(--4xl-min)) * var(--f-bp));
 }
 
-.flow > * + * { margin-block-start: var(--flow-space); }
-.flow-deep * + * { margin-block-start: var(--flow-space); }
 
-.flow-3xs-2xs { --flow-space: var(--3xs-2xs); }
-.flow-2xs-xs { --flow-space: var(--2xs-xs); }
-.flow-xs-s { --flow-space: var(--xs-s); }
-.flow-s-m { --flow-space: var(--s-m); }
-.flow-m-l { --flow-space: var(--m-l); }
-.flow-l-xl { --flow-space: var(--l-xl); }
-.flow-xl-2xl { --flow-space: var(--xl-2xl); }
-.flow-2xl-3xl { --flow-space: var(--2xl-3xl); }
-.flow-3xl-4xl { --flow-space: var(--3xl-4xl); }
-.flow-4xl-5xl { --flow-space: var(--4xl-5xl); }
+@theme {
+    /* Computed type scale */
+    --font-size--1: calc(((var(--t-1-min) / 16) * 1rem) + (var(--t-1-max) - var(--t-1-min)) * var(--f-bp));
+    --font-size-0: calc(((var(--t0-min) / 16) * 1rem) + (var(--t0-max) - var(--t0-min)) * var(--f-bp));
+    --font-size-1: calc(((var(--t1-min) / 16) * 1rem) + (var(--t1-max) - var(--t1-min)) * var(--f-bp));
+    --font-size-2: calc(((var(--t2-min) / 16) * 1rem) + (var(--t2-max) - var(--t2-min)) * var(--f-bp));
+    --font-size-3: calc(((var(--t3-min) / 16) * 1rem) + (var(--t3-max) - var(--t3-min)) * var(--f-bp));
+    --font-size-4: calc(((var(--t4-min) / 16) * 1rem) + (var(--t4-max) - var(--t4-min)) * var(--f-bp));
+    /* Computed space scale, change the subtraction for different scaling */
+    --spacing-3xs-2xs: calc(((var(--3xs-min) / 16) * 1rem) + (var(--2xs-max) - var(--3xs-min)) * var(--f-bp));
+    --spacing-2xs-xs: calc(((var(--2xs-min) / 16) * 1rem) + (var(--xs-max) - var(--2xs-min)) * var(--f-bp));
+    --spacing-xs-s: calc(((var(--xs-min) / 16) * 1rem) + (var(--s-max) - var(--xs-min)) * var(--f-bp));
+    --spacing-s-m: calc(((var(--s-min) / 16) * 1rem) + (var(--m-max) - var(--s-min)) * var(--f-bp));
+    --spacing-m-l: calc(((var(--m-min) / 16) * 1rem) + (var(--l-max) - var(--m-min)) * var(--f-bp));
+    --spacing-l-xl: calc(((var(--l-min) / 16) * 1rem) + (var(--xl-max) - var(--l-min)) * var(--f-bp));
+    --spacing-xl-2xl: calc(((var(--xl-min) / 16) * 1rem) + (var(--2xl-max) - var(--xl-min)) * var(--f-bp));
+    --spacing-2xl-3xl: calc(((var(--2xl-min) / 16) * 1rem) + (var(--3xl-max) - var(--2xl-min)) * var(--f-bp));
+    --spacing-3xl-4xl: calc(((var(--3xl-min) / 16) * 1rem) + (var(--4xl-max) - var(--3xl-min)) * var(--f-bp));
+    --spacing-4xl-5xl: calc(((var(--4xl-min) / 16) * 1rem) + (var(--5xl-max) - var(--4xl-min)) * var(--f-bp));
 
-.top-padding-large { padding-block-start: var(--2xl-3xl); }
-.bottom-padding-large { padding-block-end: var(--2xl-3xl); }
-.top-padding-medium { padding-block-start: var(--l-xl); }
-.bottom-padding-medium { padding-block-end: var(--l-xl); }
-
-/* Colors */
-:root {
     /* Neutral */
     --color-neutral-lightest: hsl(30 54% 97%);
     --color-neutral-light: hsl(30 10% 88%);
@@ -154,7 +132,104 @@
     --color-tertiary-darkest: hsl(20 93% 8%);
     --color-tertiary-darkest-hsl: 20 93% 8%;
     /* Quaternary, Quinary */
+
+    /* Fonts */
+    --font-family-base: 'Source Sans 3', sans-serif;
+    --font-family-special: 'Playfair Display', serif;
+
+    /* Line height */
+    --line-height-flat: 1;
+    --line-height-tight: 1.3;
+    --line-height-normal: 1.8;
+    --line-height-loose: 2;
+
+    /* Letter spacing */
+    --letter-spacing-base: +0ch;
+    --letter-spacing-special: +0ch;
+
+    /* Widths */
+    --width-measure: 75ch;
 }
+
+@layer base {
+    /* Reset styles, inspired by https://piccalil.li/blog/a-more-modern-css-reset/ */
+    *, *::before, *::after { box-sizing: border-box; min-inline-size: 0; margin: 0; padding: 0; }
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'], ol[role='list'] { list-style: none; }
+    /* Prevent font size inflation on Safari */
+    html { -moz-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
+    /* Smooth auto-scroll */
+    :has(:target) { scroll-behavior: smooth; }
+    /* Set core body defaults */
+    body {
+        text-rendering: optimizeSpeed;
+        @apply font-base font-[350] text-0 text-neutral-dark bg-neutral-lightest leading-normal min-h-svh overflow-x-hidden tracking-base;
+    }
+    /* Make images easier to work with */
+    img, picture {
+        @apply max-w-full h-auto align-middle italic bg-no-repeat bg-cover bg-center;
+        shape-margin: 0.75rem;
+    }
+    /* Blur images when they have no alt attribute */
+    img:not([alt]) { filter: blur(10px); }
+    /* Inherit fonts for inputs and buttons */
+    input, button, textarea, select { font: inherit; }
+    /* Make sure textareas without a rows attribute are not tiny */
+    textarea:not([rows]) { min-height: 5em; }
+    /* Anything that has been anchored to should have extra scroll margin */
+    :target { scroll-margin-block: 5ex; }
+    /* Collapse table borders by default */
+    table { border-collapse: collapse; }
+    /* Inherit fonts for inputs and buttons */
+    input, button, textarea, select { font: inherit; }
+    /* Remove button border and change cursor */
+    button { cursor: pointer; border: none; }
+    /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+    @media (prefers-reduced-motion: reduce) {
+        :has(:target) { scroll-behavior: auto; }
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+    /* Set core text defaults */
+    h1, h2, h3, h4, button, input, label { @apply leading-tight; }
+    h1, h2, h3, h4 { @apply font-bold font-special tracking-special text-balance }
+    h1 { @apply text-4; }
+    h2 { @apply text-3; }
+    h3 { @apply text-2; }
+    h4 { @apply text-1; }
+    p { @apply max-w-measure text-pretty; }
+    small { @apply text--1; }
+
+    h1 { --flow-space: var(--spacing-xl-2xl); }
+    h2 { --flow-space: var(--spacing-l-xl); }
+    h3 { --flow-space: var(--spacing-m-l); }
+    h4 { --flow-space: var(--spacing-s-m); }
+
+    p, hr {  --flow-space: var(--spacing-xs-s); }
+
+    small { font-size: var(--font-size--1); }
+}
+
+/* Typography */
+:root {
+    /* Transitions */
+    --transition-base: 250ms ease;
+    --transition-movement: 200ms linear;
+    --transition-fade: 300ms ease;
+    --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+    --transition-bounce-fast: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+}
+::selection {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-darkest);
+    -webkit-text-fill-color: var(--color-primary-darkest);
+}
+
+.gutter { @apply px-s-m w-full mx-auto max-w-[calc(var(--f-max-width)*1px)]; }
 
 .theme-neutral { color: var(--color-neutral); }
 .theme-primary { color: var(--color-primary-dark); background-color: var(--color-primary-lightest); }
@@ -169,130 +244,22 @@
 .theme-secondary hr { color: var(--color-secondary-light); }
 
 
-/* Typography */
-:root {
-    --measure: 75ch;
-    /* Line height */
-    --leading-flat: 1;
-    --leading-tight: 1.3;
-    --leading: 1.8;
-    --leading-loose: 2;
-    /* Letter spacing */
-    --tracking-base: +0ch;
-    --tracking-special: +0ch;
-    /* Fonts */
-    --font-base: 'Source Sans 3', sans-serif;
-    --font-special: 'Playfair Display', serif;
-    /* Font weights */
-    --weight-normal: 350;
-    --weight-bold: 600;
-    /* Transitions */
-    --transition-base: 250ms ease;
-    --transition-movement: 200ms linear;
-    --transition-fade: 300ms ease;
-    --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-    --transition-bounce-fast: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-}
+.flow > * + * { margin-block-start: var(--flow-space); }
+.flow-deep * + * { margin-block-start: var(--flow-space); }
 
-/* Reset styles, inspired by https://piccalil.li/blog/a-more-modern-css-reset/ */
-*, *::before, *::after { box-sizing: border-box; min-inline-size: 0; margin: 0; padding: 0; }
+.flow-3xs-2xs { --flow-space: var(--spacing-3xs-2xs); }
+.flow-2xs-xs { --flow-space: var(--spacing-2xs-xs); }
+.flow-xs-s { --flow-space: var(--spacing-xs-s); }
+.flow-s-m { --flow-space: var(--spacing-s-m); }
+.flow-m-l { --flow-space: var(--spacing-m-l); }
+.flow-l-xl { --flow-space: var(--spacing-l-xl); }
+.flow-xl-2xl { --flow-space: var(--spacing-xl-2xl); }
+.flow-2xl-3xl { --flow-space: var(--spacing-2xl-3xl); }
+.flow-3xl-4xl { --flow-space: var(--spacing-3xl-4xl); }
+.flow-4xl-5xl { --flow-space: var(--spacing-4xl-5xl); }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'], ol[role='list'] { list-style: none; }
+.top-padding-large { padding-block-start: var(--spacing-2xl-3xl); }
+.bottom-padding-large { padding-block-end: var(--spacing-2xl-3xl); }
+.top-padding-medium { padding-block-start: var(--spacing-l-xl); }
+.bottom-padding-medium { padding-block-end: var(--spacing-l-xl); }
 
-/* Prevent font size inflation on Safari */
-html { -moz-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
-/* Smooth auto-scroll */
-:has(:target) { scroll-behavior: smooth; scroll-padding-top: 0rem; }
-
-/* Set core body defaults */
-body {
-    text-rendering: optimizeSpeed;
-    overflow-x: hidden;
-    min-height: 100vh;
-    min-height: 100svh;
-    line-height: var(--leading);
-    background-color: var(--color-neutral-lightest);
-    color: var(--color-neutral-dark);
-    font-family: var(--font-base);
-    letter-spacing: var(--tracking-base);
-    font-size: var(--t0);
-    font-weight: var(--weight-normal);
-    /* overflow-wrap: break-word; */
-    /* -webkit-hyphens: auto; */
-    /* -moz-hyphens: auto; */
-    /* -ms-hyphens: auto; */
-    /* hyphens: auto; */
-}
-
-
-/* Make images easier to work with */
-img, picture {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-    font-style: italic;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    shape-margin: 0.75rem;
-}
-
-/* Blur images when they have no alt attribute */
-img:not([alt]) { filter: blur(10px); }
-
-/* Inherit fonts for inputs and buttons */
-input, button, textarea, select { font: inherit; }
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) { min-height: 10em; min-inline-size: 100%; max-inline-size: 100%; }
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target { scroll-margin-block: 5ex; }
-
-/* Collapse table borders by default */
-table { border-collapse: collapse; }
-
-/* Inherit fonts for inputs and buttons */
-input, button, textarea, select { font: inherit; }
-
-/* Remove button border and change cursor */
-button { cursor: pointer; border: none; }
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-    :has(:target) { scroll-behavior: auto; }
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* Set core text defaults */
-h1, h2, h3, h4, button, input, label { line-height: var(--leading-tight); }
-h1, h2, h3, h4 { font-family: var(--font-special); letter-spacing: var(--tracking-special); text-wrap: balance; }
-h1 { font-size: var(--t4); --flow-space: var(--xl-2xl); }
-h2 { font-size: var(--t3); --flow-space: var(--l-xl); }
-h3 { font-size: var(--t2); --flow-space: var(--m-l); }
-h4 { font-size: var(--t1); --flow-space: var(--s-m); }
-p { max-inline-size: var(--measure); text-wrap: pretty; }
-/* A elements that don't have a class (:not([class])) get default styles */
-a { text-decoration: none; color: inherit; }
-
-p, hr {  --flow-space: var(--xs-s); }
-
-small { font-size: var(--t-1); }
-
-strong { font-weight: var(--weight-bold); }
-
-/* Global classes */
-
-.gutter {
-    /* Needed in order to be a flexbox child */
-    /* inline-size: 100%; */
-    margin-inline: auto;
-    max-inline-size: calc(var(--f-max-width) * 1px);
-    padding-inline: var(--s-m);
-}

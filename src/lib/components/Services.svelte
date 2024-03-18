@@ -79,7 +79,7 @@
 	.trigger {
 		inline-size: 100%;
 		text-align: start;
-		padding: var(--s-m) var(--3xs-2xs) var(--2xs-xs);
+		padding: var(--spacing-s-m) var(--spacing-3xs-2xs) var(--spacing-2xs-xs);
 		border-block-end: 2px solid var(--color-neutral-light);
 		background-color: var(--color-neutral-lightest);
 		color: var(--color-neutral-darkest);
@@ -88,7 +88,7 @@
 		align-items: center;
 	}
 	.content {
-		padding: var(--xs-s) var(--3xs-2xs);
+		padding: var(--spacing-xs-s) var(--spacing-3xs-2xs);
 	}
 </style>
 

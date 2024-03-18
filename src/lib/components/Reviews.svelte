@@ -45,11 +45,11 @@
 	.reviews-switcher {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--m-l);
+		gap: var(--spacing-m-l);
 	}
 	.reviews-switcher > * {
 		flex-grow: 1;
-		flex-basis: calc((var(--measure) - 100%) * 999);
+		flex-basis: calc((var(--width-measure) - 100%) * 999);
 	}
 	.review-card {
 		position: relative;
@@ -58,15 +58,15 @@
 	}
 	.quote {
 		position: absolute;
-		top: calc(var(--m-l) * -1.5);
-		left: calc(var(--m-l) * -1.5);
+		top: calc(var(--spacing-m-l) * -1.5);
+		left: calc(var(--spacing-m-l) * -1.5);
 		z-index: -1;
 		opacity: 0.5;
-		font-size: var(--3xl-4xl);
+		font-size: var(--spacing-3xl-4xl);
 		color: var(--color-neutral-light);
 	}
 	.stars {
-		font-size: var(--s-m);
+		font-size: var(--spacing-s-m);
 		color: var(--color-primary-light);
 	}
 </style>

@@ -12,10 +12,6 @@
 	</div>
 </header>
 
-<div class="banner">
-
-</div>
-
 <style>
 	header {
 		position: absolute;
@@ -50,7 +46,7 @@
 	}
 
 	li {
-		font-size: var(--t-1);
+		font-size: var(--font-size--1);
 	}
 	a:is(:hover, :active) {
 		text-decoration: underline;

@@ -42,11 +42,11 @@
 	.inputs-switcher {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--s-m);
+		gap: var(--spacing-s-m);
 	}
 	.inputs-switcher > div {
 		flex-grow: 1;
-		flex-basis: calc((var(--measure) - 100%) * 999);
+		flex-basis: calc((var(--width-measure) - 100%) * 999);
 	}
 
 	.button {

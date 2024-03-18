@@ -134,9 +134,9 @@
 	.whatsapp-contact {
 		margin-inline: auto;
 		text-align: center;
-		font-size: var(--t1);
+		font-size: var(--font-size-1);
 		color: var(--color-primary-dark);
-		font-weight: var(--weight-bold);
+		font-weight: 600;
 	}
 
 	.whatsapp-contact a {
@@ -149,9 +149,7 @@
 
 	a:hover {
 		text-decoration: underline;
-		/* color: var(--color-primary) */
 	}
-
 
 	.banner {
 		position: fixed;
@@ -162,14 +160,14 @@
 		/* border-block-start: 2px solid var(--color-secondary); */
 		bottom: 0;
 		z-index: 30;
-		line-height: var(--leading-tight);
+		line-height: var(--line-height-tight);
 	}
 
 	.banner > p {
 		text-align: end;
 		margin-inline: auto;
 		font-size: var(--t-1);
-		font-weight: var(--weight-bold);
+		font-weight: 600;
 	}
 
 	.banner a {

@@ -11,8 +11,6 @@
 			<p><small> &copy; {new Date().getFullYear()} Balance Point / <i>diseño de <a href="https://vaut.io">vaut.io</a></i></small></p>
 		</div>
 	</div>
-
-
 </footer>
 
 <style>
